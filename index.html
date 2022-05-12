@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>AgroConsult</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <header>
+            <!--Inicio do header-->
+
+            <div class="navbar">
+                <!--Itens do header-->
+
+                <div class="logo">
+                    <img src="img/logooriginal.png" alt="Logo Imagem" height="73px">
+                    <h1>AgroConsult</h1>
+                </div>
+
+                <div class="itens_nav">
+                    <li class="header_item"><b><a class="a_header" href="">Início</a></b></li>
+                    <li class="header_item"><b><a class="a_header" href="">Simulador</a></b></li>
+                    <li class="header_item"><b><a class="a_header" href="">Sobre Nós</a></b></li>
+                    <li class="header_item"><b><a class="a_header" href="">Equipe</a></b></li>
+                    <li class="header_item"><b><a class="a_header" href="">Contato</a></b></li>
+                </div>
+
+                <div class="header_CadLog">
+                    <li class="li_Log"><b><a class="a_CadLog" href="">Login</a></b></li>
+                    <li class="li_Cad"><b><a class="a_CadLog" href="">Cadastro</a></b></li>
+                </div>
+
+                <!--Fim dos itens-->
+            </div>
+
+            <!--Fim do header-->
+        </header>
+    </div>
+
+    <div id="espacamento"></div>
+
+    <!--Começo do inicio-->
+    <section id="index">
+
+        <!--Inicio do carrosel-->
+        <div class="slider">
+
+            <!--Carrossel abreviado é car-->
+
+            <div class="carrossel">
+
+                <input type="radio" name="radio_btn" id="radio1">
+                <input type="radio" name="radio_btn" id="radio2">
+                <input type="radio" name="radio_btn" id="radio3">
+
+                <div class="slide first">
+                    <img class="img_Car" src="img/carrossel_1.jpg" alt="imagem 1" height="800px">
+                    <div class="car_texto1">
+                        <h1>
+                            Leve agora o melhor monitoramento para suas terras com a <b id="grifado"> AgroConsult. </b>
+                        </h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="img_Car" src="img/carrossel_2.jpg" alt="imagem 2" height="800px">
+                    <div class="car_texto2">
+                        <h1>
+                            O melhor sistema de monitoramento do mercado que
+                            transmite os dados em tempo real.
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img class="img_Car" src="img/carrossel_3.jpg" alt="imagem 3" height="800px">
+                    <div class="car_texto3">
+                        <h1>
+                            Economize com os melhores preços do mercado.
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+            
+            <script src="js/carrossel.js"></script>
+        </div>
+        <!--Fim do carrosel-->
+
+    </section>
+    <!--Fim do inicio-->
+
+
+</body>
+
+</html>

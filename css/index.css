@@ -1,0 +1,239 @@
+header {
+    position: fixed;
+    background-color: rgb(169, 184, 165);
+    display: flex;
+    width: 100%;
+    height: 11vh;
+    margin: auto;
+    padding: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 2;
+}
+
+.navbar {
+    margin-top: 0%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 13px;
+    margin-right: 0%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: #216921;
+}
+
+
+.itens_nav {
+    color: #216921;
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+    width: 33%;
+    justify-content: space-between; 
+}
+
+.a_header {
+    color: #216921;
+}
+
+.header_CadLog {
+
+    width: 200px;
+    color: white;
+    font-size: 18px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.li_Log {
+    color: #216921;
+}
+
+.li_Cad {
+    color: white;
+}
+
+.a_CadLog{
+    color: #216921;
+}
+
+/*CONTEÚDO DO INICIO*/
+
+/*Inicio do carrosel*/
+#index {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+
+}
+
+.carrossel {
+    list-style: none;
+    width: 400%;
+    height: 800px;
+    display: flex;
+    
+}
+
+.carrossel input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    transition: 1s;
+}
+
+.slide img {
+    width: 100%;
+
+}
+
+.car_texto1{
+    width: 40%;
+    color: #ffffff;
+    font-size: 27px;
+    position: relative;
+    bottom: 80%;
+    left: 6%;
+    z-index: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#grifado {
+    color: green;
+}
+.car_texto2{
+    width: 
+    50%;
+    color: #ffffff;
+    font-size: 27px;
+    position: relative;
+    bottom: 80%;
+    left: 6%;
+    z-index: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.car_texto3{
+    width: 
+    40%;
+    color: #ffffff;
+    font-size: 27px;
+    position: relative;
+    bottom: 80%;
+    left: 6%;
+    z-index: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.slide::before{ 
+    content: '';
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;  
+    top: 10%;
+    background: transparent linear-gradient(270deg, rgba(13, 13, 13, 0) 0%, rgba(5, 5, 5, 0.24) 50%, rgba(71, 99, 98, 0.466) 100%) 0% 0% no-repeat padding-box;
+}
+
+.btn_SiCar:hover {
+    background-color: #216921;
+    color: #ffffff;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 10px;
+    margin-top: -90px;
+    display: flex;
+    justify-content: center;
+    bottom: 11%;
+    left: 49.6%;
+}
+
+.manual-btn {
+    border: 2px solid #00DA20;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.8s;
+
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+
+.manual-btn:hover {
+    background-color: #cdffdf;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+
+.navigation-auto div {
+    border: 2px solid #856889;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 86%;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #cdffdf;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #cdffdf;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #cdffdf;
+}
+
