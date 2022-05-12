@@ -1,2 +1,4 @@
 # SITE-PI
-Criação do SITE de pesquisa e inovação.
+Criação do sistema Agro Consult em equipe.<br>
+Disciplina: Pesquisa e Inovação 1° Semestre.
+
