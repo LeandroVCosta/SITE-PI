@@ -4,7 +4,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Váriaveis globais */
     --cor-principal: #318d07;
+    --cor-secundaria: #267900;
+    --sideBar-width: 70px;
 }
 
 a {
@@ -16,6 +20,7 @@ body {
     width: 100%;
     --header-height: 90px;
     background: #e6e6e6;
+    overflow-x: hidden;
 }
 
 button {
@@ -28,11 +33,16 @@ header {
     align-items: center;
     justify-content: space-between;
     height: var(--header-height);
-    background-color: var(--cor-principal);
+    background: linear-gradient(to right, var(--cor-principal), #43c51a, var(--cor-principal));
+    z-index: 1;
 }
 
 header img {
     height: calc(100% - 5px);
+}
+
+img {
+    user-select: none;
 }
 
 li {
@@ -40,18 +50,11 @@ li {
 }
 
 main {
-    position: absolute;
-    top: var(--header-height);
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: calc(100% - var(--header-height));
-    width: 100%;
-    border-radius: 10px;
-    background-color: #f5deb3;
+    height: 100%;
 }
 
 /* FIM - ESTILOS TAGS */
+
 
 /* INICIO - Tags genéricas */
 
@@ -60,9 +63,28 @@ main {
     margin: auto;
 }
 
+.ml-5 {
+    margin: 5em;
+}
+
+
+/* Local onde todo o conteúdo da página estará */
+.page-content {
+    position: absolute;
+    top: calc(var(--header-height) + 10px);
+    right: 0;
+    bottom: 0;
+    left: calc(var(--sideBar-width) + 35px);
+    width: 90%;
+    border-radius: 10px;
+    background-color: #f5deb3;
+    transition: 500ms;
+}
+
 /* FIM - Tags genéricas */
 
-/* INICIO - HEADER */
+
+/* INICIO - HEADER (barra de navegação do topo) */
 
 .navbar {
     display: flex;
@@ -70,22 +92,139 @@ main {
     height: 100%;
 }
 
-.navbar ul {
+.top-bar ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 200px;
 }
 
-.navbar ul li {
+.top-bar ul li {
     cursor: pointer;
     height: calc(var(--header-height) * 0.45);
 }
 
-.navbar div {
+.top-bar div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
     height: 100%;
-    width: 100px;
-    background-color: white;
+    min-width: 200px;
+    max-width: 250px;
+    color: white;
+    background-color: var(--cor-secundaria);
 }
 
-/* FIM - HEADER */
+.top-bar div img {
+    height: 17px;
+    filter: invert(100%) sepia(100%) saturate(28%) hue-rotate(48deg) brightness(106%) contrast(109%);
+}
+
+/* FIM - HEADER (barra de navegação do topo) */
+
+
+/* INICIO - ASIDE (barra de navegação lateral) */
+
+.side-bar {
+    align-items: flex-start;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    width: var(--sideBar-width);
+    box-shadow: 10px 0 0 #099c22;
+    border-left: 10px solid #424242;
+    background-color: #424242;
+    overflow-x: hidden;
+    transition: 500ms;
+}
+
+/* 
+.side-bar:hover ~ .page-content , .side-bar:hover{
+    --sideBar-width: 210px;
+} */
+
+.side-bar:hover~.page-content, .side-bar:hover {
+    --sideBar-width: 210px;
+}
+
+
+
+.side-bar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 40px 0 0 5px;
+}
+
+.side-bar ul li {
+    position: relative;
+    display: flex;
+    height: 75px;
+    width: 100%;
+    padding: 0 0 0 10px;
+    margin: 15px 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.side-bar ul li:hover {
+    background-color: #535353;
+}
+
+.side-bar ul li.active {
+    background-color: #099c22;
+}
+
+/* Estilo ao clicar no elemento */
+.side-bar ul li.active a::after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #099c22;
+    transition: 500ms;
+}
+
+.side-bar ul li.active a::before {
+    content: '';
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: #424242;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #099c22;
+    transition: 500ms;
+}
+
+.side-bar ul li a {
+    width: 100%;
+    color: white;
+}
+
+.side-bar ul li a figure {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.side-bar ul li a figure img {
+    height: 25px;
+    margin: 0 10px;
+    filter: invert(100%) sepia(100%) saturate(28%) hue-rotate(48deg) brightness(106%) contrast(109%);
+}
+
+.side-bar ul li a figure figcaption {
+    line-height: 60px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* FIM - ASIDE (barra de navegação lateral) */
