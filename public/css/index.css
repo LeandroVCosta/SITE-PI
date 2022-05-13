@@ -1,9 +1,10 @@
+/* INICIO DO HEADER */
 header {
     position: fixed;
     background-color: #90aa87;
     display: flex;
     width: 100%;
-    height: 11vh;
+    height: 12vh;
     margin: auto;
     padding: 0%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -19,7 +20,7 @@ header {
 }
 
 .logo {
-    font-size: 13px;
+    font-size: 12px;
     margin-right: 0%;
     justify-content: space-between;
     align-items: center;
@@ -30,14 +31,15 @@ header {
 
 .itens_nav {
     color: #216921;
-    font-size: 18px;
+    font-size: 16px;
     align-items: center;
     display: flex;
     width: 33%;
     justify-content: space-between; 
+    list-style: none;
 }
 
-.a_header {
+.header_item {
     color: #216921;
 }
 
@@ -45,30 +47,26 @@ header {
 
     width: 200px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-
-
 .li_Log {
     color: #216921;
-}
-
-.li_Cad {
-    color: white;
 }
 
 .a_CadLog{
     color: #216921;
 }
 
-/*CONTEÚDO DO INICIO*/
+/* Fim do header*/ 
 
-/*Inicio do carrosel*/
+/*INICIO DO CARROSEL*/
+
+/*index é o corpo do carrossel*/
 #index {
     margin: 0;
     padding: 0;
@@ -79,6 +77,7 @@ header {
     align-items: center;
 }
 
+/*slider é como se fosse um conteiner do carrossel*/
 .slider {
     margin: 0 auto;
     width: 100%;
@@ -108,6 +107,8 @@ header {
     width: 100%;
 
 }
+
+/*car_texto são os texto que aparecem no carrossel*/
 
 .car_texto1{
     width: 40%;
@@ -146,6 +147,7 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/*Gradiante que está por cima da imagem do carrossel*/
 .slide::before{ 
     content: '';
     width: 100%;
@@ -155,13 +157,17 @@ header {
     left: 0;
     bottom: 0;  
     top: 10%;
-    background: transparent linear-gradient(270deg, rgba(13, 13, 13, 0) 0%, rgba(5, 5, 5, 0.24) 50%, rgba(71, 99, 98, 0.466) 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(270deg, rgba(13, 13, 13, 0.10) 0%, rgba(13, 13, 13, 0.10) 50%, rgba(0, 108, 0, 0.10) 100%) 0% 0% no-repeat padding-box;
 }
+/*Fim do gradiante*/
+
 
 .btn_SiCar:hover {
     background-color: #216921;
     color: #ffffff;
 }
+
+/*Botão de passar as imagens do carrossel*/
 
 .manual-navigation {
     position: absolute;
@@ -186,13 +192,13 @@ header {
     margin-right: 40px;
 }
 
-
+/*Quando vc clica no botão, o comando empurra a imagem 25% pro lado, assim passando de slide*/
 .manual-btn:hover {
     background-color: #cdffdf;
 }
 
 #radio1:checked~.first {
-    margin-left: 0;
+    margin-left: -2px;
 }
 
 #radio2:checked~.first {
@@ -203,7 +209,9 @@ header {
     margin-left: -50%;
 }
 
+/*fim do botão*/
 
+/*Botão onde mostra em qual imagens do carrossel está*/
 .navigation-auto div {
     border: 2px solid #856889;
     padding: 10px;
@@ -235,5 +243,59 @@ header {
 
 #radio3:checked~.navigation-auto .auto-btn3 {
     background-color: #cdffdf;
+}
+/*Fim do botão*/
+
+.img_car1 {
+    background-image: url(../img/inicio/header/carrossel_1.png);
+    
+}
+
+/* FIM DO CARROSEL */
+
+/*CONTEÚDO DO SOBRE NÓS*/
+
+.sob_content { /*DELIMITANDO O TAMANHO DO SOBRE NÓS*/
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: green
+}
+
+.sob_box { /*BOX COM O TEXTO E A IMAGEM DO QUEM SOMOS?*/
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    border: black solid 7px;
+    border-radius: 50px;
+    background-color: gray;
+    align-items: center;
+}
+
+.sob_img1 { /*POSICIONAMENTO DA IMAGEM, E A IMAGEM*/
+    height: 220px;
+    width: 220px;
+    margin-left: 5%;
+    border-radius: 20px;
+    background-image: url(../img/inicio/sobrenos/imgmilhofigure.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sob_texto { /*DIV COM O TEXTO SEPARADO DA IMAGEM*/
+    height: 220px;
+    width: 60%;
+    margin-left: 10%;
+    border-radius: 20px;
+    background-color: white;
 }
 

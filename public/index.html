@@ -19,17 +19,17 @@
                 <!--Itens do header-->
 
                 <div class="logo">
-                    <img src="img/logooriginal.png" alt="Logo Imagem" height="73px">
+                    <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
                     <h1>AgroConsult</h1>
                 </div>
 
-                <div class="itens_nav">
-                    <li class="header_item"><b><a class="a_header" href="">Início</a></b></li>
-                    <li class="header_item"><b><a class="a_header" href="">Simulador</a></b></li>
-                    <li class="header_item"><b><a class="a_header" href="">Sobre Nós</a></b></li>
-                    <li class="header_item"><b><a class="a_header" href="">Equipe</a></b></li>
-                    <li class="header_item"><b><a class="a_header" href="">Contato</a></b></li>
-                </div>
+                <ul class="itens_nav">
+                    <li><b><a class="header_item" href="">Início</a></b></li>
+                    <li><b><a class="header_item" href="">Simulador</a></b></li>
+                    <li><b><a class="header_item" href="">Sobre Nós</a></b></li>
+                    <li><b><a class="header_item" href="">Equipe</a></b></li>
+                    <li><b><a class="header_item" href="">Contato</a></b></li>
+                </ul>
 
                 <div class="header_CadLog">
                     <li class="li_Log"><b><a class="a_CadLog" href="">Login</a></b></li>
@@ -55,37 +55,43 @@
 
             <div class="carrossel">
 
+                <!--Botão de passar as imagens do carrossel-->
                 <input type="radio" name="radio_btn" id="radio1">
                 <input type="radio" name="radio_btn" id="radio2">
                 <input type="radio" name="radio_btn" id="radio3">
+                <!--Fim do botão-->
 
+                <!--Imagens e textos do carrossel-->
                 <div class="slide first">
-                    <img class="img_Car1" src="img/carrossel_1.png" alt="imagem 1" height="800px">
+                    <img class="img_Car1" src="img/inicio/header/carrossel_1.png" alt="imagem 1" height="800px">
                     <div class="car_texto1">
                         <h1>
-                            Leve agora o melhor monitoramento para suas terras com a <b id="grifado"> AgroConsult. </b>
+                            Leve agora o melhor monitoramento para sua fazenda com a <b id="grifado"> AgroConsult. </b>
                         </h1>
                     </div>
                 </div>
                 <div class="slide">
-                    <img class="img_Car2"  src="img/carrossel_2.jpg" alt="imagem 2" height="800px">
+                    <img class="img_Car2" src="img/inicio/header/carrossel_2.jpg" alt="imagem 2" height="800px">
                     <div class="car_texto2">
                         <h1>
-                            O melhor sistema de monitoramento do mercado que
-                            transmite os dados em tempo real.
+                            O melhor sistema de monitoramento do mercado para o seu plantio.
                         </h1>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <img class="img_Car3" src="img/carrossel_3.jpg" alt="imagem 3" height="800px">
+                    <img class="img_Car3" src="img/inicio/header/carrossel_3.jpg" alt="imagem 3" height="800px">
                     <div class="car_texto3">
                         <h1>
                             Economize com os melhores preços do mercado.
                         </h1>
                     </div>
                 </div>
+                <!--Fim das imagens e textos-->
+
             </div>
+
+            <!--Botão onde mostra em qual imagens do carrossel está-->
             <div class="navigation-auto">
                 <div class="auto-btn1"></div>
                 <div class="auto-btn2"></div>
@@ -97,14 +103,29 @@
                 <label for="radio2" class="manual-btn"></label>
                 <label for="radio3" class="manual-btn"></label>
             </div>
-            
+            <!--Fim do botão-->
+
+            <!--Link para ligar com o JavaScript do carrossel-->
             <script src="js/carrossel.js"></script>
+            <!--fim do link-->
         </div>
         <!--Fim do carrosel-->
 
     </section>
     <!--Fim do inicio-->
 
+    <!-- Inicio Sobre Nós -->
+    <div class="sob_content">
+        <h3>SOBRE NÓS</h3>
+        <div class="sob_box">
+            <figure class="sob_img1"></figure>
+            <div class="sob_texto"> <b>QUEM SOMOS?</b>
+                <p style="color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ex molestias,
+                    esse aut corporis, reiciendis amet, quos ut harum quam ea? Unde quidem dolorum esse nemo praesentium
+                    et itaque at?.</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 
