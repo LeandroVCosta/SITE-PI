@@ -92,7 +92,7 @@ main {
     height: 100%;
 }
 
-.top-bar ul {
+.top-bar > ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -112,13 +112,63 @@ main {
     height: 100%;
     min-width: 200px;
     max-width: 250px;
-    color: white;
+    color: #fff;
     background-color: var(--cor-secundaria);
 }
 
 .top-bar div img {
     height: 17px;
     filter: invert(100%) sepia(100%) saturate(28%) hue-rotate(48deg) brightness(106%) contrast(109%);
+}
+
+.top-bar div span{
+    user-select: none;
+}
+
+/* Parte com dropdown da navbar */
+
+.drop{
+    position: absolute;
+    top: var(--header-height);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column; 
+    width: 200px;
+    height: auto;
+    background: #424242;
+    transition: 1000ms;
+}
+
+.drop:hover{
+    height: 10px;
+}
+
+.drop li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto !important;
+    padding: 17px 0;
+    user-select: none;
+    background-color: #424242;
+    transition: 200ms;
+}
+
+.drop li:hover{
+    background-color: #535353;
+}
+
+.drop li a{
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 20px;
+    justify-content: center;
+    color: #fff;
+}
+
+.drop li a img{
+    height: 25px;
+    margin: 0 10px;
 }
 
 /* FIM - HEADER (barra de navegação do topo) */
@@ -140,23 +190,17 @@ main {
     transition: 500ms;
 }
 
-/* 
-.side-bar:hover ~ .page-content , .side-bar:hover{
-    --sideBar-width: 210px;
-} */
-
 .side-bar:hover~.page-content, .side-bar:hover {
     --sideBar-width: 210px;
 }
-
-
 
 .side-bar ul {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
-    padding: 40px 0 0 5px;
+    padding: 0 0 0 5px;
+    user-select: none;
 }
 
 .side-bar ul li {
@@ -175,6 +219,12 @@ main {
 
 .side-bar ul li.active {
     background-color: #099c22;
+}
+
+.side-bar ul li a {
+    width: 100%;
+    color: #fff;
+    user-select: none;
 }
 
 /* Estilo ao clicar no elemento */
@@ -202,11 +252,6 @@ main {
     border-radius: 50%;
     box-shadow: 15px -15px 0 #099c22;
     transition: 500ms;
-}
-
-.side-bar ul li a {
-    width: 100%;
-    color: white;
 }
 
 .side-bar ul li a figure {
