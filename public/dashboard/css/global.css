@@ -92,28 +92,33 @@ main {
     height: 100%;
 }
 
-.top-bar > ul {
+.top-bar>ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 200px;
 }
 
-.top-bar ul li {
+.top-bar>ul li {
     cursor: pointer;
     height: calc(var(--header-height) * 0.45);
 }
 
 .top-bar div {
-    display: flex;
-    align-items: center;
     justify-content: center;
     column-gap: 20px;
-    height: 100%;
     min-width: 200px;
     max-width: 250px;
     color: #fff;
     background-color: var(--cor-secundaria);
+}
+
+.top-bar div:hover .drop {
+    height: 100%;
+}
+
+.top-bar div:hover .drop li {
+    opacity: 1;
 }
 
 .top-bar div img {
@@ -121,44 +126,40 @@ main {
     filter: invert(100%) sepia(100%) saturate(28%) hue-rotate(48deg) brightness(106%) contrast(109%);
 }
 
-.top-bar div span{
+.top-bar div span {
     user-select: none;
 }
 
 /* Parte com dropdown da navbar */
 
-.drop{
-    position: absolute;
+.drop {
+    position: fixed;
     top: var(--header-height);
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column; 
+    flex-direction: column;
     width: 200px;
-    height: auto;
+    height: 0;
     background: #424242;
-    transition: 1000ms;
+    transition: 500ms;
+    overflow: hidden;
 }
 
-.drop:hover{
-    height: 10px;
-}
-
-.drop li{
+.drop li {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
-    height: auto !important;
-    padding: 17px 0;
+    height: 70px;
     user-select: none;
-    background-color: #424242;
-    transition: 200ms;
+    transition: 500ms;
+    opacity: 0;
 }
 
-.drop li:hover{
+.drop li:hover {
     background-color: #535353;
 }
 
-.drop li a{
+.drop li a {
     display: flex;
     align-items: center;
     margin: 0 0 0 20px;
@@ -166,7 +167,7 @@ main {
     color: #fff;
 }
 
-.drop li a img{
+.drop li a img {
     height: 25px;
     margin: 0 10px;
 }
