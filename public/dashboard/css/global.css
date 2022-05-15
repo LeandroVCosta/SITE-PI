@@ -3,12 +3,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: monospace;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* Váriaveis globais */
     --cor-principal: #318d07;
     --cor-secundaria: #267900;
     --sideBar-width: 70px;
+}
+
+/* Estilizando barra de rolagem */
+
+/* Tamanho da barra */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 15px;
+}
+
+/* Estilo do fundo */
+*::-webkit-scrollbar-track {
+    background: white;
+}
+
+/* Estilo da barra */
+*::-webkit-scrollbar-thumb {
+    background-color: var(--cor-secundaria);
+    border-radius: 20px;
+    border: 3px solid white;
 }
 
 a {
@@ -56,7 +75,7 @@ main {
 /* FIM - ESTILOS TAGS */
 
 
-/* INICIO - Tags genéricas */
+/* INICIO - Classes genéricas */
 
 .container {
     width: 100%;
@@ -66,7 +85,6 @@ main {
 .ml-5 {
     margin: 5em;
 }
-
 
 /* Local onde todo o conteúdo da página estará */
 .page-content {
@@ -81,7 +99,7 @@ main {
     transition: 500ms;
 }
 
-/* FIM - Tags genéricas */
+/* FIM - Classes genéricas */
 
 
 /* INICIO - HEADER (barra de navegação do topo) */
@@ -131,7 +149,6 @@ main {
 }
 
 /* Parte com dropdown da navbar */
-
 .drop {
     position: fixed;
     top: var(--header-height);

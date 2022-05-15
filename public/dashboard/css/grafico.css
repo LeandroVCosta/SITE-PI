@@ -1,0 +1,160 @@
+/* INICIO - ESTILOS TAGS */
+b {
+    color: black;
+    font-size: 14px;
+}
+
+/* FIM - ESTILOS TAGS */
+
+/* INICIO - Classes genéricas */
+
+.controlado {
+    color: #025302;
+    background-color: #06c40691;
+}
+
+.moderado {
+    color: #535202;
+    background-color: #c4c10691;
+}
+
+.critico {
+    color: #530202;
+    background-color: #c4060691;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 49.5%;
+    background-color: #e5d0d0;
+    overflow-y: auto;
+}
+
+.box h2 {
+    text-align: center;
+    font-size: 27px;
+}
+
+/* FIM - Classes genéricas */
+
+
+/* INICIO - LEGENDA DAS MÉTRICAS */
+
+.legenda {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.legenda div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 13px;
+    padding: 10px;
+}
+
+.legenda div span img {
+    vertical-align: middle;
+}
+
+/* FIM - LEGENDA DAS MÉTRICAS */
+
+
+/* INICIO - GRÁFICOS */
+
+.dash-container {
+    height: auto;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e5d0d0;
+}
+
+.metrica {
+    height: 150px;
+    width: 20%;
+    font-size: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.circulo {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+/* Seleção das fazendas */
+#farm_list {
+    height: 64px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.farm {
+    height: 100%;
+    width: auto;
+    padding: 0 5px;
+    border-top: solid 1px #000;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
+    cursor: pointer;
+}
+
+.farm-posicao {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    column-gap: 5px;
+}
+
+.farm-posicao h1 {
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.farm-posicao img {
+    height: 13px;
+    pointer-events: none;
+}
+
+#farm_conteudo {
+    background-color: #e5d0d0;
+    padding: 10px;
+    text-align: center;
+}
+
+.fill {
+    height: 300px;
+    width: 100%;
+    background-color: #e5d0d0;
+}
+
+.fill span {
+    font-size: 16px;
+    padding: 0 20px 0 0;
+}
+
+/* Tabela com informações da fazenda */
+:is(.box) table, th, td, thead {
+    height: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* FIM - GRÁFICOS */

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/grafico.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/sistema/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../img/sistema/favicon/android-chrome-512x512.png">
+    <title>AgroConsult - Gráficos</title>
+</head>
+
+<body>
+    <!-- Barra de navegação do topo -->
+    <header class="container">
+        <img class="ml-5" src="../img/sistema/logo-agroconsult.png" alt="Logo da empresa que usa o sistema">
+
+        <nav class="navbar top-bar">
+            <ul>
+                <li><img src="../img/sistema/svg/notification.svg" alt="Notificações" title="Notificação"></li>
+                <li><img src="../img/sistema/svg/help.svg" alt="Ajuda da página" title="Ajuda rápida"></li>
+            </ul>
+
+            <div class="navbar">
+                <span>Sample</span>
+                <img src="../img/sistema/svg/down-arrow.svg" alt="Menu com queda">
+                <ul class="navbar drop">
+                    <li>
+                        <a href="#">
+                            <img src="../img/sistema/svg/settings.svg" alt="Guia de como usar o sistema">
+                            <span>Configuração</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="../img/sistema/svg/logout.svg" alt="Sair do site">
+                            <span>Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Barra de navegação lateral -->
+        <aside class="navbar side-bar">
+            <ul>
+                <li class="list">
+                    <a href="index.html">
+                        <figure>
+                            <img src="../img/sistema/svg/home.svg" alt="Página inicial">
+                            <figcaption>Inicio</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="#">
+                        <figure>
+                            <img src="../img/sistema/svg/chart.svg" alt="Página com gráficos">
+                            <figcaption>Gráficos</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <figure>
+                            <img src="../img/sistema/svg/account-group.svg" alt="Página para cadastrar usúarios">
+                            <figcaption>Cadastrar usúarios</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <figure>
+                            <img src="../img/sistema/svg/user-list.svg" alt="Página para visualizar usúarios online">
+                            <figcaption>Usúarios online</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#">
+                        <figure>
+                            <img src="../img/sistema/svg/help.svg" alt="Guia de como usar o sistema">
+                            <figcaption>Guia</figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="page-content">
+            <!-- Legenda da métricas -->
+            <section class="legenda">
+                <div class="controlado">
+                    <span> <img src="../img/sistema/svg/full-circle.svg"> Temperatura ideal: <b>24°</b> entre
+                        <b>30°</b></span>
+                    <span> <img src="../img/sistema/svg/full-circle.svg"> Umidade ideal: <b>16%</b> entre
+                        <b>18%</b></span>
+                </div>
+
+                <div class="moderado">
+                    <span> <img src="../img/sistema/svg/full-circle.svg"> Temperatura moderada: <b>23°</b> e
+                        <b>31°</b></span>
+                    <span> <img src="../img/sistema/svg/full-circle.svg"> Umidade moderada: <b>15%</b> e
+                        <b>19%</b></span>
+                </div>
+
+                <div class="critico">
+                    <span> <img src="../img/sistema/svg/full-circle.svg"> Temperatura crítica: <b>22°</b> ou menos e
+                        <b>32°</b> ou mais</span>
+                    <span> <img src="../img/sistema/svg/full-circle.svg"> Umidade crítica: <b>14%</b> ou menos e
+                        <b>20%</b>
+                        ou mais</span>
+                </div>
+            </section>
+
+            <!-- Métricas e gráficos -->
+            <section class="dash-container">
+                <!-- A maior/menor temperatura registrada no momento -->
+                <article class="metrica controlado">
+                    <span>Menor Temperatura</span>
+                    <div class="circulo">
+                        <span id="min_celsius">24°</span>
+                    </div>
+                </article>
+                <article class="metrica moderado">
+                    <span>Maior Temperatura</span>
+                    <div class="circulo">
+                        <span id="max_celsius">31°</span>
+                    </div>
+                </article>
+
+                <!-- A maior/menor umidade registrada no momento -->
+                <article class="metrica controlado">
+                    <span>Menor Umidade</span>
+                    <div class="circulo">
+                        <span id="min_moisture">17%</span>
+                    </div>
+                </article>
+                <article class="metrica critico">
+                    <span>Maior Umidade</span>
+                    <div class="circulo">
+                        <span id="max_moisture">45%</span>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Seleção das fazendas para analisar -->
+            <section id="farm_list"></section>
+
+            <!-- Gráficos da fazenda selecionada -->
+            <section id="farm_conteudo"></section>
+            
+            <!-- Tabelas com dados para análise rápida -->
+            <section id="farm_tabela" class="dash-container">
+                
+        </section>
+    </main>
+
+</body>
+
+<script src="js/global.js"></script>
+<script src="js/grafico.js"></script>
+
+</html>
