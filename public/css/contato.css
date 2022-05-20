@@ -12,20 +12,21 @@ body {
 
 .formas_contato{
     display: flex;
-    height: 20vh;
-    width: 45vw;
+    height: 35vh;
+    width: 78vw;
     background-color: transparent;
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-around;
     margin: 5%;
-    margin-left: 10%;
+    margin-left: 8%;
     margin-top: 38vh;
 }
 
 span{
-    display: flex;
+    display: flex;      
     font-size:25px;
+    margin-bottom: 6%;
 }
 
 h3{
@@ -47,7 +48,7 @@ h2{
     display: flex;
     height: 75vh;
     width: 35vw;
-    background-color: #ccdbcb91;
+    background-color: #86aa837c;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -60,28 +61,30 @@ input{
     width: 80%;
     margin-bottom: 6%;
     border: none;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #707070;
     outline: 0px;
     background-color: transparent;
     color: #000000;
+    flex-wrap: wrap;
+
 }
 
 ::-webkit-input-placeholder {
-
     color: #707070;
     font-weight: bold;
 }
 
-.in_descricao{
-    height: 40%;
+ textarea{
+    outline: none;
+    border: 1px solid #707070;
     background-color: #ffffff;
-    border-bottom: 0px;    
+    resize: none;
     border-radius: 5px;
 }
 
 
 .btn_contato{
-    height: 12%;
+    height: 15%;
     width: 30%;
     padding: 20px;
     border: 2px solid #99e4c700;
@@ -90,6 +93,8 @@ input{
     cursor: pointer;
     font-size: 25px;
     color: #ffffff;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .btn_contato:hover{

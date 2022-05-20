@@ -14,15 +14,18 @@
     <header>
         <!--Itens do header-->
         <nav class="navbar">
-            <div class="logo">
-                <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
-                <h1>AgroConsult</h1>
-            </div>
+            
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
+                    <h1>AgroConsult</h1>
+                </div>
+            </a>
 
             <ul class="itens_nav">
-                <li><a class="header_item" href="#">Início</a></li>
+                <li><a class="header_item" href="index.html">Início</a></li>
                 <li><a class="header_item" href="#">Simulador</a></li>
-                <li><a class="header_item" href="#">Sobre Nós</a></li>
+                <li><a class="header_item" href="index.html#sobrenos">Sobre Nós</a></li>
                 <li><a class="header_item" href="#">Equipe</a></li>
                 <li><a class="header_item" href="#">Contato</a></li>
             </ul>
@@ -49,7 +52,7 @@
             <input class="in_contato" name="Nome" placeholder="Informe seu nome:" type="text">
             <input class="in_contato" name="E-mail" placeholder="Informe seu e-mail:" type="text">
             <input class="in_contato" name="Assunto" placeholder="Informe o assunto:" type="text">
-            <input class="in_contato in_descricao" name="Descrição" placeholder="Descrição:" type="text">
+            <textarea name="Descrição" id="descricao" placeholder="Descrição" cols="52" rows="10"></textarea>
 
             <button class="btn_contato">Enviar</button>
 

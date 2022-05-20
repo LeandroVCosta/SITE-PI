@@ -3,7 +3,6 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-block: none;
 }
 
 #espacamento{
@@ -19,10 +18,11 @@ a {
 /* INICIO DO HEADER */
 header {
     position: fixed;
-    background-color: #90aa87;
+    background-color: #d1d6ce;
     display: flex;
     width: 100%;
     height: 12vh;
+    border-bottom: 2px solid #216921;
     margin: auto;
     z-index: 2;
 }
@@ -39,28 +39,28 @@ header {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    color: #216921;
+    font-size: 20px;
+    color: #10ad10;
 }
 
 .itens_nav {
-    color: #216921;
-    font-size: 16px;
+    font-size: 20px;
     align-items: center;
     display: flex;
-    width: 33%;
+    width: 38%;
     justify-content: space-between;
     list-style: none;
 }
 
 .header_item {
-    color: #216921;
+    color: #2e8b2e;
     font-weight: bold;
 }
 
 .header_CadLog {
     width: 200px;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -68,12 +68,20 @@ header {
     justify-content: space-around;
 }
 
-.li_Log {
-    color: #216921;
-}
+
 
 .a_CadLog {
-    color: #216921;
+    color: #2e8b2e;
 }
+
+.header_item:hover{
+    color: #5c665c;
+}
+
+.a_CadLog:hover{
+    color: #5c665c;
+}
+
+
 
 /* FIM DO HEADER*/

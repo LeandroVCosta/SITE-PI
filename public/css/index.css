@@ -190,7 +190,7 @@
 
 /*CONTEÚDO DO SOBRE NÓS*/
 
-.sob_content {
+#sobrenos {
     /*DELIMITANDO O TAMANHO DO SOBRE NÓS*/
     background-image: url(../img/inicio/sobrenos/fundobranco.webp);
     background-size: cover;
@@ -254,3 +254,63 @@
     background-size: cover;
     
 }
+
+/*Fim do sobre  nós*/
+
+/*Inicio da equipe*/
+
+#equipe {
+    margin: 0;
+    padding: 0;
+    margin-top: 5%;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background-color: #ebfff2;
+}
+
+
+.equipe {
+    border-radius: 0 0 50px 50px;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: #707070;
+}
+
+
+.equipe>h1 {
+    font-size: 40px;
+    color: #688984;
+}
+
+.equipe h3 {
+    color: #688984;
+}
+
+.integrantes {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+}
+.integrantes figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fotos_int {
+    border-radius: 50%;
+    border: 2px solid #00DA20;
+    height: 140px;
+    width: 140px;
+}
+
+/*Fim da equipe*/
