@@ -40,24 +40,41 @@
     </header>
     <!--Fim do header-->
 
-    <div id="espacamento"></div>
     <!-- Conteúdo da página -->
 
     <!--Formulário de cadastro-->
-    <div class="cardCadastro">
-        <h2>Cadastro pessoa juridica</h2>
+    <main>
+        <section class="container">
+            <div class="login">
+                <h2>Já possui cadastro?</h2>
+                <button class="btnlog">Login</button>
+            </div>
 
-        <span class="campo">Nome completo:</span>
-        <input type="name" placeholder="Seu nome">
+            <div class="cadastro">
+                <h2>Cadastro</h2>
+                <form class="formulario">
 
-        <span class="campo">CNPJ:</span>
-        <input type="text" placeholder="Ex: XX. XXX. XXX/0001-XX">
+                    <div class="div_formulario">
+                        <span class="span_form">Nome:</span>
+                        <input class="input" type="text" id="in_nome" placeholder="Seu Nome">
+                    </div>
 
-        <span class="campo">Senha:</span>
-        <input type="password" placeholder="********">
+                    <div class="div_formulario">
+                        <span class="span_form">E-mail:</span>
+                        <input class="input" type="email" id="in_email" placeholder="usuario@provedor.com">
+                    </div>
 
-        <button class="btn">Cadastrar</button>
-    </div>
+                    <div class="div_formulario">
+                        <span class="span_form">Senha:</span>
+                        <input class="input" type="password" id="in_senha" placeholder="**********">
+                    </div>
+
+                    <button class="btn">Continuar</button>
+
+                </form>
+            </div>
+        </section>
+    </main>
 
 </body>
 

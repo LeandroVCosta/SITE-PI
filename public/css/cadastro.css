@@ -1,16 +1,114 @@
-.cardCadastro {
-    background-color: #9b9797d2;
-    height: 300px;
-    width: 400px;
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+header {
+    position: static !important;
+}
+
+.container {
+    margin: auto;
+    height: 500px;
+    width: 100%;
+    background-color: rgb(255, 253, 253);
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.login {
+    height: 100%;
+    width: 25%;
+    
+    color: white;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    border: black solid 5px;
+    border-left: 0px;
+}
+
+
+.cadastro {
     display: flex;
     flex-direction: column;
+    height: calc(100% - 20px);
+    width: 25%;
+    background-color: #006400;
     align-items: center;
+    padding-top: 20px;
+    border: black solid 5px;
+    border-right: 0px;
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: auto;
-    border-radius: 15px;
-    position: relative;
-    border-radius: 15px;
-    box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    padding: 20px;
-    margin-top: 5%;
+    background-color: #006400;
+    height: 100%;
+    width: 100%;
+    gap: 45px;
+}
+
+.div_formulario {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+.span_form {
+    padding-left: 35px;
+}
+
+.btn {
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 900px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, orangered, orange);
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.btnlog{
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 900px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(to right, orangered, orange);
+    cursor: pointer;
+}
+
+.btnlog:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
