@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#espacamento{
+    height: 5vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/* INICIO DO HEADER */
+header {
+    position: fixed;
+    background-color: #90aa87;
+    display: flex;
+    width: 100%;
+    height: 12vh;
+    margin: auto;
+    z-index: 2;
+}
+
+.navbar {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    color: #216921;
+}
+
+.itens_nav {
+    color: #216921;
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    width: 33%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header_item {
+    color: #216921;
+    font-weight: bold;
+}
+
+.header_CadLog {
+    width: 200px;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.li_Log {
+    color: #216921;
+}
+
+.a_CadLog {
+    color: #216921;
+}
+
+/* FIM DO HEADER*/
+
+
+/*CONTEÚDO DO SOBRE NÓS*/
+
+.sob_content {
+    /*DELIMITANDO O TAMANHO DO SOBRE NÓS*/
+    background-image: url(../img/inicio/sobrenos/fundobranco.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    height: 200h;
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    text-align: center;
+    color: green
+}
+
+.sob_titulo {
+    margin-top: 2%;
+}
+
+.sob_box {
+    /*BOX COM O TEXTO E A IMAGEM DO QUEM SOMOS?*/
+    width: 460px;
+    margin-left: 30%;
+    padding-top: 40px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    border: green solid 3px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.33);
+    align-items: center;
+}
+
+
+
+.sob_texto {
+    /*DIV COM O TEXTO SEPARADO DA IMAGEM*/
+    height: 430px;
+    width: 60%;
+    border: black solid 2px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.33);
+    text-align: center;
+}
+
+.footer {
+    margin-top: 150px;
+    background-color: rgba(0, 0, 255, 0);
+    height: 70px;
+    font-family: monospace;
+}
+
+.copy{
+    padding-left: 8%;
+    color: black;
+    font-size: bold;
+    display: flex;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    z-index: 6;
+    height: 37px;
+}
+
+
+.membros{
+    text-decoration: none;
+    color: rgb(3, 78, 3);
+    
+}

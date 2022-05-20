@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/simulador.css">
+   
+    <title>AgroConsult2</title>
+</head>
+
+<body>
+    <!--Inicio do header-->
+    <header>
+        <!--Itens do header-->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
+                <h1>AgroConsult</h1>
+            </div>
+
+            <ul class="itens_nav">
+                <li><a class="header_item" href="#">Início</a></li>
+                <li><a class="header_item" href="#">Simulador</a></li>
+                <li><a class="header_item" href="#">Sobre Nós</a></li>
+                <li><a class="header_item" href="#">Equipe</a></li>
+                <li><a class="header_item" href="#">Contato</a></li>
+            </ul>
+
+            <ul class="header_CadLog">
+                <li class="li_Log"><b><a class="a_CadLog" href="#">Login</a></b></li>
+                <li class="li_Cad"><b><a class="a_CadLog" href="cadastro.html">Cadastro</a></b></li>
+            </ul>
+
+            <!--Fim dos itens-->
+        </nav>
+    </header>
+    <!--Fim do header-->
+
+    <!-- Conteúdo da página -->
+    <main>
+        
+        
+
+        <!-- Inicio Sobre Nós -->
+        <section class="sob_content">
+            
+            <div class="sob_box">
+                <figure class="sob_img1"></figure>
+                <div class="sob_texto"> <b>Simulador Financeiro</b> <br> <br>
+                    <p style="color: black;">
+                        &nbsp; O milho é um dos grãos <b>mais produzidos</b> no mundo e uma das <b>culturas mais
+                            importantes</b>
+                        no Brasil - cultivado em pequenas, <b>médias e grandes</b> propriedades e sendo <b>fonte de
+                            renda</b> de
+                        diversas famílias. No VBP (valor bruto da produção agropecuária) do ano de 2021, o <b>milho
+                            teve o
+                            valor</b> R$ 124,8 bilhões.
+                        <br>
+                        Com os <b>prognósticos do tempo</b> para 2022 indicando chuvas em momento adequado com bom
+                        desenvolvimento das lavouras, <b>o valor estimado</b> para o VBP do milho é de, R$ 148,5
+                        <b>bilhões em 2022</b>.
+                    </p>
+                    <div class="calculadora">
+                        <div>
+                            <h4><input type="text" placeholder="Campo em hectare" id="tam_lavoura"></h4>
+                            <h4> <input type="text" placeholder="Sacas por hectare" id="qtd_sacas"></h4>
+                            <button onclick="calcular()" class="btn">Calcular</button>
+                            <button onclick="zerar()" class="btn">Zerar</button>
+                        </div>
+                    </div>
+                </div><br>
+                <div id="resultado" class="texto2"></div>
+                </div>
+                <footer class="footer">
+                    <div class="container3">
+                        <ul>
+                            <a href="contato.html" class="membros">Equipe AgroConsult</a><br>
+                            
+                        </ul>
+                        <article>
+                            <p class="copy">&copy;  <span id="i_ano" style="color: black;"></span> &nbsp; Todos direitos reservados à AgroConsult</p>
+                        </article>
+                    </div>
+                </footer>
+            </div>
+        <!-- VALORES E LOCALIZAÇÃO -->
+            
+        </section>
+    </main>
+
+    
+
+</body>
+</html>
+<script>
+ function calcular() {
+        // Pegando o número de sacas e o tamanho da lavoura
+        var sacas = Number(tam_lavoura.value)
+        var lavoura = Number(qtd_sacas.value)
+
+        // Calculando a porcentagem de lucro em relação a média nacional
+        var lavoura_media = (100 * lavoura / 90) - 100
+        // Calculando a porcentagem de lucro em relação as lavouras mais rentaveis
+        var lavoura_rentavel = (100 * lavoura / 270) - 100
+        // Calculando a porcentagem de lucro em relação a média nacional COM nosso sistema
+        var lavoura_m_sistema = ((100 * lavoura / 90) * 1.16) - 100
+        // Calculando a porcentagem de lucro em relação as lavoura mais rentaveis COM nosso sistema
+        var lavoura_r_sistema = ((100 * lavoura / 270) * 1.16) - 100
+
+        // A safra da lavoura do usuario
+        var safra = sacas * lavoura
+        // A safra da lavoura do usuario COM nosso sistema
+        var safra_sistema = safra * 1.16
+
+        // Valor da saca (17/03/2022 às 15:12)
+        var valor_saca = 103.74
+        // Valor da safra do cliente
+        var lucro_saca = safra * 103.57
+        // Valor da safra do cliente COM nosso sistema
+        var lucro_saca_sistema = safra * 103.57 * 1.16
+        // Comparando o lucro com ou sem o nosso sistema
+        var diferenca_lucro = lucro_saca_sistema - lucro_saca
+
+        var frase_final = `<h3>Olá!</h3>`
+        frase_final += `Com o nosso sistema, garantimos um aumento de <b>16%</b> na produção do milho<br>`
+        frase_final += `- Sua safra será de ${(safra_sistema).toFixed(2)} sacas em uma safra.<br>`
+        frase_final += `- Sua lavoura produzirá ${(lavoura_m_sistema).toFixed(2)}% em relação a média <b>nacional</b> e ${(lavoura_r_sistema).toFixed(2)}% as lavouras mais rentáveis.<br>`
+        frase_final += `- Vendendo a saca por R$ 103,57, o lucro será de R$${(lucro_saca_sistema).toFixed(2)}, <b>R$${(diferenca_lucro).toFixed(2)}</b> a mais<br>`
+
+        resultado.innerHTML = frase_final
+    }
+
+    function zerar() {
+        resultado.innerHTML = ""
+    }
+
+    var Data_atual = new Date()
+var Ano_atual = Data_atual.getFullYear();
+document.getElementById('i_ano').innerHTML = Ano_atual
+
+</script>
