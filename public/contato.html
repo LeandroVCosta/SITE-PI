@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/cadastro.css">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/sistema/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="img/sistema/favicon/android-chrome-512x512.png">
-    <title>AgroConsult - Cadastro</title>
+    <link rel="stylesheet" href="css/contato.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <!--Inicio do header-->
     <header>
         <!--Itens do header-->
         <nav class="navbar">
@@ -27,7 +24,7 @@
                 <li><a class="header_item" href="#">Simulador</a></li>
                 <li><a class="header_item" href="#">Sobre Nós</a></li>
                 <li><a class="header_item" href="#">Equipe</a></li>
-                <li><a class="header_item" href="contato.html">Contato</a></li>
+                <li><a class="header_item" href="#">Contato</a></li>
             </ul>
 
             <ul class="header_CadLog">
@@ -38,25 +35,27 @@
             <!--Fim dos itens-->
         </nav>
     </header>
-    <!--Fim do header-->
+    <div class="formas_contato">
+        <span><h3>E-mail:</h3> &nbsp &nbsp <h4 class="h4">agroconsult@gmail.com</h4></span>
+        
+        <span><h3>Telefone:</h3> &nbsp &nbsp <h4>1194002-8922</h4></span>
+        
+        <span><h3>Endereço:</h3> &nbsp &nbsp <h4>Rua Haddock Lobo, 595, São Paulo</h4></span>
+        
+    </div>
+    <div class="container">
+        <div class="box_contato">
+            <h2>Contato</h2>
+            <input class="in_contato" name="Nome" placeholder="Informe seu nome:" type="text">
+            <input class="in_contato" name="E-mail" placeholder="Informe seu e-mail:" type="text">
+            <input class="in_contato" name="Assunto" placeholder="Informe o assunto:" type="text">
+            <input class="in_contato in_descricao" name="Descrição" placeholder="Descrição:" type="text">
 
-    <div id="espacamento"></div>
-    <!-- Conteúdo da página -->
+            <button class="btn_contato">Enviar</button>
 
-    <!--Formulário de cadastro-->
-    <div class="cardCadastro">
-        <h2>Cadastro pessoa juridica</h2>
+        </div>
 
-        <span class="campo">Nome completo:</span>
-        <input type="name" placeholder="Seu nome">
 
-        <span class="campo">CNPJ:</span>
-        <input type="text" placeholder="Ex: XX. XXX. XXX/0001-XX">
-
-        <span class="campo">Senha:</span>
-        <input type="password" placeholder="********">
-
-        <button class="btn">Cadastrar</button>
     </div>
 
 </body>
