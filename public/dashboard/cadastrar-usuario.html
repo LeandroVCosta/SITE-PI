@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cadastrar-usuario.css">
     <link rel="stylesheet" href="css/global.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" type="image/png" sizes="192x192" href="../img/sistema/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../img/sistema/favicon/android-chrome-512x512.png">
-    <title>AgroConsult</title>
+    <title>AgroConsult - Cadastrar Usuários</title>
 </head>
 
 <body>
@@ -49,8 +50,8 @@
         <!-- Barra de navegação lateral -->
         <aside class="navbar side-bar">
             <ul>
-                <li class="list active">
-                    <a href="#">
+                <li class="list">
+                    <a href="index.html">
                         <figure>
                             <img src="../img/sistema/svg/home.svg" alt="Página inicial">
                             <figcaption>Inicio</figcaption>
@@ -65,8 +66,8 @@
                         </figure>
                     </a>
                 </li>
-                <li class="list">
-                    <a href="cadastrar-usuario.html">
+                <li class="list active">
+                    <a href="#">
                         <figure>
                             <img src="../img/sistema/svg/account-group.svg" alt="Página para cadastrar usúarios">
                             <figcaption>Cadastrar usúarios</figcaption>
@@ -94,14 +95,60 @@
 
         <!-- Conteúdo da página -->
         <section class="page-content">
+            <!-- Cadastrar um novo usuário -->
+            <section class="form-section">
+                <!-- Inspiração https://static.helpjuice.com/helpjuice_production/uploads/upload/image/7634/direct/1634171360575-adicionar%20novo%20usu%C3%A1rio.png -->
+                <form>
+                    <div>
+                        <label for="inp_name">Nome</label>
+                        <input type="text" id="inp_name">
+                    </div>
+                    <div>
+                        <label for="inp_email">Email</label>
+                        <input type="email" id="inp_email">
+                    </div>
+                    <div>
+                        <label for="inp_position">Cargo</label>
+                        <input type="text" id="inp_position">
+                    </div>
+                    <div>
+                        <label for="inp_password">Senha</label>
+                        <input type="password" id="inp_password">
+                    </div>
+                </form>
+            </section>
 
-            <section></section>
-
+            <!-- Visualizar usuários online -->
+            <section class="users-online">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Cargo</th>
+                            <th>Senha</th>
+                            <th class="txt-center">Editar</th>
+                            <th class="txt-center">Deletar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Helder</td>
+                            <td>helder@gmail.com</td>
+                            <td>Gerente</td>
+                            <td>******</td>
+                            <td class="txt-center"><img src="../img/sistema/svg/pencil_writing.svg" alt="Editar usuário" title="Editar usuário"></td>
+                            <td class="txt-center"><img src="../img/sistema/svg/delete.svg" alt="Deletar usuário" title="Deletar usuário"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </section>
     </main>
 
 </body>
 
-</html>
-
 <script src="js/global.js"></script>
+<!-- <script src="js/cadastrar-usuario.js"></script> -->
+
+</html>

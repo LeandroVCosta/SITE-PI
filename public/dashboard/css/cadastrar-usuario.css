@@ -1,0 +1,49 @@
+/* INICIO - Formulário para cadastrar novo usuário */
+.form-section {
+    background-color: cadetblue;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: violet;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    background-color: aquamarine;
+}
+
+/* FIM - Formulário para cadastrar novo usuário */
+
+
+/* INICIO - Visualização dos usuários online */
+
+.users-online {
+    background-color: cornflowerblue;
+}
+
+table {
+    background-color: azure;
+    width: 100%;
+    text-align: left;
+}
+
+tr {
+    height: 30px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+td img {
+    height: 20px;
+}
+
+/* FIM - Visualização dos usuários online */
