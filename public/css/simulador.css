@@ -14,35 +14,44 @@
 }
 
 .simu_titulo {
+    font-size: 40px;
     margin-top: 10%;
 }
 
+.h2 {
+    font-size: 30px;
+    color: rgb(61, 61, 61);
+}
+
 .simu_box {
-    margin-bottom: 15%;
-    width: 250px;
-    height: 200px;
+    margin-bottom: 1%;
+    width: 300px;
+    height: 250px;
     display: flex;
-    flex-direction: column;
-    border:  rgb(172, 180, 155) solid 3px;
+    flex-direction: column-reverse;
+    border: rgb(172, 180, 155) solid 3px;
     border-radius: 10px;
     background-color: rgb(172, 180, 155);
-    color: black;
     font-weight: lighter;
     align-items: center;
 }
-input{
+
+input {
     margin: 10px;
+    border: rgb(61, 61, 61) solid 2px;
+    border-radius: 4px;
 }
 
 
 .texto {
+    margin: 10px;
     font-size: 20px;
     font-weight: bold;
-    width: 500px;
-    height: 600px;
-    margin-top: 150px;
+    width: 600px;
+    height: 447px;
+    margin-top: 200px;
     display: flex;
-    color: black;
+    color: rgb(61, 61, 61);
 }
 
 /*COMEÇO DO POPUP*/
@@ -81,7 +90,7 @@ input{
     padding: 20px;
     border-radius: 10px;
     background: rgb(172, 180, 155);
-    color: black;
+    color: rgb(61, 61, 61);
     font-weight: bold;
     position: relative;
 
@@ -105,15 +114,35 @@ input{
 
 /*FIM DO POPUP*/
 
+.fonte {
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0);
+    height: 10px;
+    font-family: monospace;
+    bottom: 5%;
+    position: absolute;
+    font-size: 12px;
+    color:rgb(61, 61, 61);
+}
+
+.fonte a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 
 /*FOOTER
 
 .footer {
-
-    /* margin-top: 50%; 
-    background-color: rgba(0, 0, 255, 0);
+     align-items: center;
+    width: 100%;
+    background-color:white;
     height: 10px;
     font-family: monospace;
+    bottom: 0;
+    position: absolute;
 }
 
 .copy {
@@ -126,12 +155,4 @@ input{
     border-collapse: collapse;
     z-index: 6;
     height: 37px;
-}
-
-
-.membros {
-    text-decoration: none;
-    color: rgb(3, 78, 3);
-
-}
-*/
+}*/

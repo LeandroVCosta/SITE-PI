@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/simulador.css">
 
-    <title>AgroConsult2</title>
+    <title>AgroConsult</title>
 </head>
 
 <body>
@@ -47,12 +47,19 @@
         <!-- Inicio Sobre Nós -->
         <div class="texto">
             <p>
-                Calcule Aqui quanto pode ser o rendimento do seu negócio com os Serviços da AgroConsult.
+                Calcule Aqui quanto pode ser o rendimento do seu negócio com os Serviços da AgroConsult. <br><br>
+                
+                O valor da saca do milho está cotado hoje em <b style="color: black;">R$ 88,48</b>. <br><br>
+
+                Informações disponibilizadas pela <b style="color: black;">EPAGRI/CEPA (2021)</b>, mostram que uma lavoura de milho de média tecnologia, 
+                com investimento realizado para uma expectativa de rendimento de 140 sacas por Hectare, 
+                possui um custo estimado R$ 5.708,67. Para nível alto de tecnologia e expectativa de rendimento de <b style="color: black;">180 sacas</b>.
             </p>
         </div>
         <div class="simu_box">
 
-            <div class="simu_texto"> <b>Simulador Financeiro</b> <br> <br>
+            <div class="simu_texto">
+                <h2 class="h2">Simulador Financeiro</h2>
                 <div class="calculadora">
                     <h4><input type="text" placeholder="Campo em hectare" id="tam_lavoura"></h4>
                     <h4> <input type="text" placeholder="Sacas por hectare" id="qtd_sacas"></h4>
@@ -75,7 +82,10 @@
             </div>
 
         </div>
-
+        <p class="fonte">Fontes: 
+            <a href="https://www.melhorcambio.com/milho-hoje ">https://www.melhorcambio.com/milho-hoje</a><br>
+            <a href="https://sementesbiomatrix.com.br">https://sementesbiomatrix.com.br</a>
+        </p>
         <!--footer class="footer">
 
 
@@ -94,8 +104,8 @@
 <script>
     function calcular() {
         // Pegando o número de sacas e o tamanho da lavoura
-        var sacas = Number(tam_lavoura.value)
-        var lavoura = Number(qtd_sacas.value)
+        var sacas = Number(qtd_sacas.value)
+        var lavoura = Number(tam_lavoura.value)
 
         // Calculando a porcentagem de lucro em relação a média nacional
         var lavoura_media = (100 * lavoura / 90) - 100
@@ -111,20 +121,19 @@
         // A safra da lavoura do usuario COM nosso sistema
         var safra_sistema = safra * 1.16
 
-        // Valor da saca (17/03/2022 às 15:12)
-        var valor_saca = 103.74
+        // Valor da saca (22/05/2022 às 15:00)
+        var valor_saca = 88.48
         // Valor da safra do cliente
-        var lucro_saca = safra * 103.57
+        var lucro_saca = safra * 88.48
         // Valor da safra do cliente COM nosso sistema
-        var lucro_saca_sistema = safra * 103.57 * 1.16
+        var lucro_saca_sistema = safra * 88.48 * 1.16
         // Comparando o lucro com ou sem o nosso sistema
         var diferenca_lucro = lucro_saca_sistema - lucro_saca
 
-        var frase_final = `<h3>Olá!</h3>`
-        frase_final += `Com o nosso sistema, garantimos um aumento de <b>16%</b> na produção do milho<br>`
-        frase_final += `- Sua safra será de ${(safra_sistema).toFixed(2)} sacas em uma safra.<br>`
-        frase_final += `- Sua lavoura produzirá ${(lavoura_m_sistema).toFixed(2)}% em relação a média <b>nacional</b> e ${(lavoura_r_sistema).toFixed(2)}% as lavouras mais rentáveis.<br>`
-        frase_final += `- Vendendo a saca por R$ 103,57, o lucro será de R$${(lucro_saca_sistema).toFixed(2)}, <b>R$${(diferenca_lucro).toFixed(2)}</b> a mais<br>`
+        var frase_final = `<h3>Olá Produtor!</h3><br>`
+        frase_final += `Com o nosso sistema, garantimos um aumento de <b style="color: black;">16%</b> na produção do milho.<br>`
+        frase_final += `Sua safra será de <b style="color: black;">${(safra_sistema).toFixed(2)}</b> sacas em uma safra.<br>`
+        frase_final += `Vendendo a saca por <b style="color: black;">R$ 88,48</b>, o lucro será de <b style="color: black;">R$${(lucro_saca_sistema).toFixed(2)}</b>.<br><br>`
 
         resultado.innerHTML = frase_final
     }
