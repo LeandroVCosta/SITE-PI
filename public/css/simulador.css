@@ -1,132 +1,122 @@
-* {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+/*COMEÇO DO SIMULADOR*/
 
-#espacamento{
-    height: 5vh;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-
-/* INICIO DO HEADER */
-header {
-    position: fixed;
-    background-color: #90aa87;
-    display: flex;
-    width: 100%;
-    height: 12vh;
-    margin: auto;
-    z-index: 2;
-}
-
-.navbar {
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.logo {
-    font-size: 12px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    color: #216921;
-}
-
-.itens_nav {
-    color: #216921;
-    font-size: 16px;
-    align-items: center;
-    display: flex;
-    width: 33%;
-    justify-content: space-between;
-    list-style: none;
-}
-
-.header_item {
-    color: #216921;
-    font-weight: bold;
-}
-
-.header_CadLog {
-    width: 200px;
-    color: white;
-    font-size: 16px;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: space-around;
-}
-
-.li_Log {
-    color: #216921;
-}
-
-.a_CadLog {
-    color: #216921;
-}
-
-/* FIM DO HEADER*/
-
-
-/*CONTEÃšDO DO SOBRE NÃ“S*/
-
-.sob_content {
-  
+.simu_content {
     background-image: url(../img/inicio/sobrenos/fundobranco.webp);
-    /* gap: 20px; */background-size: cover;
+    /* gap: 20px; */
+    background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
     height: 200h;
     display: flex;
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
-    color: green
-;justify-content: space-around;}
-
-.sob_titulo {
-    margin-top: 2%;
+    justify-content: space-around;
 }
 
-.sob_box {
-    width: 200px;
-    height: 150px;
+.simu_titulo {
+    margin-top: 10%;
+}
+
+.simu_box {
+    margin-bottom: 15%;
+    width: 250px;
+    height: 200px;
     display: flex;
     flex-direction: column;
-    border: green solid 3px;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.33);
+    border:  rgb(172, 180, 155) solid 3px;
+    border-radius: 10px;
+    background-color: rgb(172, 180, 155);
+    color: black;
+    font-weight: lighter;
     align-items: center;
 }
-
-
-.texto{
-    
-    width: 600px;
-    height: 200px;
-    margin-top: 100px;
-    display: flex;
-    
+input{
+    margin: 10px;
 }
 
+
+.texto {
+    font-size: 20px;
+    font-weight: bold;
+    width: 500px;
+    height: 600px;
+    margin-top: 150px;
+    display: flex;
+    color: black;
+}
+
+/*COMEÇO DO POPUP*/
+
+* {
+    box-sizing: border-box;
+}
+
+.btn {
+    display: block;
+    margin: 20px auto;
+    background: rgb(61, 61, 61);
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+.popup-wrapper {
+    display: none;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    font-family: arial;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgb(172, 180, 155);
+    color: black;
+    font-weight: bold;
+    position: relative;
+
+}
+
+.popup a {
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+
+}
+
+/*FIM DO POPUP*/
+
+
+/*FOOTER
+
 .footer {
-    
-    /* margin-top: 50%; */
+
+    /* margin-top: 50%; 
     background-color: rgba(0, 0, 255, 0);
-    height: 70px;
+    height: 10px;
     font-family: monospace;
 }
 
-.copy{
+.copy {
     padding-left: 8%;
     color: black;
     font-size: bold;
@@ -139,8 +129,9 @@ header {
 }
 
 
-.membros{
+.membros {
     text-decoration: none;
     color: rgb(3, 78, 3);
-    
+
 }
+*/

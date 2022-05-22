@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/simulador.css">
-   
+
     <title>AgroConsult2</title>
 </head>
 
@@ -15,17 +16,19 @@
     <header>
         <!--Itens do header-->
         <nav class="navbar">
-            <div class="logo">
-                <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
-                <h1>AgroConsult</h1>
-            </div>
+            <a href="index.html">
+                <div class="logo">
+                    <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
+                    <h1>AgroConsult</h1>
+                </div>
+            </a>
 
             <ul class="itens_nav">
-                <li><a class="header_item" href="#">Início</a></li>
-                <li><a class="header_item" href="#">Simulador</a></li>
-                <li><a class="header_item" href="#">Sobre Nós</a></li>
+                <li><a class="header_item" href="index.html">Início</a></li>
+                <li><a class="header_item" href="simulador.html">Simulador</a></li>
+                <li><a class="header_item" href="index.html#sobrenos">Sobre Nós</a></li>
                 <li><a class="header_item" href="#">Equipe</a></li>
-                <li><a class="header_item" href="#">Contato</a></li>
+                <li><a class="header_item" href="contato.html">Contato</a></li>
             </ul>
 
             <ul class="header_CadLog">
@@ -39,57 +42,57 @@
     <!--Fim do header-->
 
     <!-- Conteúdo da página -->
-    <main>
-        
+    <main class="simu_content">
+
         <!-- Inicio Sobre Nós -->
-        <section class="sob_content">
-            <div class="texto">
-                <p style="color: black;">
-                    &nbsp; O milho é um dos grãos <b>mais produzidos</b> no mundo e uma das <b>culturas mais
-                        importantes</b>
-                    no Brasil - cultivado em pequenas, <b>médias e grandes</b> propriedades e sendo <b>fonte de
-                        renda</b> de
-                    diversas famílias. No VBP (valor bruto da produção agropecuária) do ano de 2021, o <b>milho
-                        teve o
-                        valor</b> R$ 124,8 bilhões.
-                    <br>
-                    Com os <b>prognósticos do tempo</b> para 2022 indicando chuvas em momento adequado com bom
-                    desenvolvimento das lavouras, <b>o valor estimado</b> para o VBP do milho é de, R$ 148,5
-                    <b>bilhões em 2022</b>.
-                </p>
-            </div>
-            <div class="sob_box">
-                
-                <figure class="sob_img1"></figure>
-                <div class="sob_texto"> <b>Simulador Financeiro</b> <br> <br>
-                    <div class="calculadora">
-                            <h4><input type="text" placeholder="Campo em hectare" id="tam_lavoura"></h4>
-                            <h4> <input type="text" placeholder="Sacas por hectare" id="qtd_sacas"></h4>
-                            <button onclick="calcular()" class="btn">Calcular</button>
-                            <button onclick="zerar()" class="btn">Zerar</button>
+        <div class="texto">
+            <p>
+                Calcule Aqui quanto pode ser o rendimento do seu negócio com os Serviços da AgroConsult.
+            </p>
+        </div>
+        <div class="simu_box">
+
+            <div class="simu_texto"> <b>Simulador Financeiro</b> <br> <br>
+                <div class="calculadora">
+                    <h4><input type="text" placeholder="Campo em hectare" id="tam_lavoura"></h4>
+                    <h4> <input type="text" placeholder="Sacas por hectare" id="qtd_sacas"></h4>
+                    <button onclick="calcular()" class="btn">Calcular</button>
+                    <div class="popup-wrapper">
+                        <div class="popup">
+
+                            <div class="popup-close">x</div>
+                            <div class="popup-content">
+                                <p id="resultado"></p>
+                                <a class="popup-link" href="Cadastro.html">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div><br>
-              
-                </div>
-                
+
             </div>
-            
-        </section>
-        <footer class="footer">
-            <div class="container3">
-               
-                <article>
-                    <p class="copy">&copy;  <span id="i_ano" style="color: black;"></span> &nbsp; Todos direitos reservados à AgroConsult</p>
-                </article>
-            </div>
-        </footer>
+
+        </div>
+
+        <!--footer class="footer">
+
+
+            <article>
+                <p class="copy">&copy; <span id="i_ano" style="color: black;"></span> &nbsp; Todos direitos reservados à
+                    AgroConsult</p>
+            </article>
+            </footer-->
     </main>
 
-    
 
+    <script src="js/simulador.js"></script>
 </body>
+
 </html>
 <script>
- function calcular() {
+    function calcular() {
         // Pegando o número de sacas e o tamanho da lavoura
         var sacas = Number(tam_lavoura.value)
         var lavoura = Number(qtd_sacas.value)
@@ -126,12 +129,8 @@
         resultado.innerHTML = frase_final
     }
 
-    function zerar() {
-        resultado.innerHTML = ""
-    }
-
-    var Data_atual = new Date()
-var Ano_atual = Data_atual.getFullYear();
-document.getElementById('i_ano').innerHTML = Ano_atual
+    /*var Data_atual = new Date()
+    var Ano_atual = Data_atual.getFullYear();
+    document.getElementById('i_ano').innerHTML = Ano_atual*/
 
 </script>
