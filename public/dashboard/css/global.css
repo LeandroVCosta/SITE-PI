@@ -60,6 +60,10 @@ header img {
     height: calc(100% - 5px);
 }
 
+input:focus-visible {
+    outline: none;
+}
+
 img {
     user-select: none;
 }

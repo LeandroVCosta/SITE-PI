@@ -89,24 +89,26 @@
         <section class="page-content">
             <!-- Cadastrar um novo usuário -->
             <section class="form-section">
-                <!-- Inspiração https://static.helpjuice.com/helpjuice_production/uploads/upload/image/7634/direct/1634171360575-adicionar%20novo%20usu%C3%A1rio.png -->
                 <form>
-                    <div>
-                        <label for="inp_name">Nome</label>
-                        <input type="text" id="inp_name">
-                    </div>
-                    <div>
-                        <label for="inp_email">Email</label>
-                        <input type="email" id="inp_email">
-                    </div>
-                    <div>
-                        <label for="inp_position">Cargo</label>
-                        <input type="text" id="inp_position">
-                    </div>
-                    <div>
-                        <label for="inp_password">Senha</label>
-                        <input type="password" id="inp_password">
-                    </div>
+                    <article class="form-inputs">
+                        <div>
+                            <input type="text" placeholder=" " id="inp_name">
+                            <label for="inp_name">Nome:</label>
+                        </div>
+                        <div>
+                            <input type="email" placeholder=" " id="inp_email">
+                            <label for="inp_email">Email:</label>
+                        </div>
+                        <div>
+                            <input type="text" placeholder=" " id="inp_position">
+                            <label for="inp_position">Cargo:</label>
+                        </div>
+                        <div>
+                            <input type="password" placeholder=" " id="inp_password">
+                            <label for="inp_password">Senha:</label>
+                        </div>
+                    </article>
+                    <button type="button" class="btn-register" onclick="">Registrar</button>
                 </form>
             </section>
 
@@ -115,7 +117,7 @@
                 <!-- Pesquisa de usuário -->
                 <article>
                     <input type="search" placeholder="Procurar usuário" onkeyup="">
-                    <select id="search_category">
+                    <select id="search_category" onchange="">
                         <option value="sel_name">Nome</option>
                         <option value="sel_email">Email</option>
                         <option value="sel_position">Cargo</option>
@@ -146,8 +148,10 @@
                                 <span>******</span>
                                 <img src="../img/sistema/svg/eye_closed.svg" alt="Ver senha" title="Ver senha">
                             </td>
-                            <td class="txt-center"><img src="../img/sistema/svg/pencil_writing.svg" alt="Editar usuário" title="Editar usuário"></td>
-                            <td class="txt-center"><img src="../img/sistema/svg/delete.svg" alt="Deletar usuário" title="Deletar usuário"></td>
+                            <td class="txt-center"><img src="../img/sistema/svg/pencil_writing.svg" alt="Editar usuário"
+                                    title="Editar usuário"></td>
+                            <td class="txt-center"><img src="../img/sistema/svg/delete.svg" alt="Deletar usuário"
+                                    title="Deletar usuário"></td>
                         </tr>
                     </tbody>
                 </table>
