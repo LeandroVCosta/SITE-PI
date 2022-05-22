@@ -1,3 +1,11 @@
+/* INICIO - Tag genérica */
+
+.txt-center {
+    text-align: center;
+}
+
+/* FIM - Tag genérica */
+
 /* INICIO - Formulário para cadastrar novo usuário */
 .form-section {
     background-color: cadetblue;
@@ -30,6 +38,7 @@ form div {
 
 table {
     background-color: azure;
+    border-collapse: collapse;
     width: 100%;
     text-align: left;
 }
@@ -38,12 +47,25 @@ tr {
     height: 30px;
 }
 
-.txt-center {
-    text-align: center;
+td, th {
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
 }
 
 td img {
     height: 20px;
+    cursor: pointer;
 }
+
+.pass {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-right: 0;
+    border-left: 0;
+}
+
 
 /* FIM - Visualização dos usuários online */
