@@ -13,18 +13,16 @@ form {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    padding: 30px 0;
     height: 100%;
     align-items: center;
-}
-
-.form-section {
-    height: 200px;
+    background-color: #c3bebe;
 }
 
 .form-inputs {
     display: flex;
     column-gap: 120px;
-    row-gap: 20px;
+    row-gap: 40px;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
@@ -37,33 +35,49 @@ form {
 
 /* Input com label animado */
 
+.form-inputs input {
+    height: 30px;
+    width: 100%;
+    font-size: 17px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid #808080;
+    transition: 500ms;
+}
+
 .form-inputs label {
+    font-size: 17px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 6px;
     user-select: none;
     transition: 500ms;
 }
 
-.form-inputs input {
-    width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid #808080;
-    transition: 500ms;
+.view-pass{
+    left: calc(100% - 30px) !important;
+    bottom: 0 !important;
+    cursor: pointer;
 }
 
 .form-inputs input:is(:hover, :focus) {
-    border-bottom: 2px solid var(--cor-principal);
+    border-bottom: 4px solid var(--cor-principal);
 }
 
 .form-inputs input:is(:hover, :focus)+label,
 .form-inputs input:not(:placeholder-shown)+label {
-    bottom: 18px;
+    bottom: 30px;
 }
 
+/* Gerador de email e senha */
+.generator {
+    display: flex;
+    gap: 20px;
+    user-select: none;
+}
 
+/* Botão para cadastrar */
 .btn-register {
     width: 180px;
     height: 40px;
@@ -81,9 +95,42 @@ form {
 
 /* INICIO - Visualização dos usuários online */
 
-.users-online {
-    background-color: cornflowerblue;
+/* Insert de pesquisa de usuário */
+
+.user-search {
+    display: flex;
+    margin: 20px 0 0 0;
 }
+
+.div_search {
+    position: relative;
+    width: 80%;
+    height: 30px;
+}
+
+.div_search input {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 0 33px;
+    font-size: 17px;
+}
+
+.div_search label {
+    position: absolute;
+    bottom: 0;
+    left: 7px;
+}
+
+.div_search label img {
+    height: 23px;
+    user-select: none;
+}
+
+.users-online {
+    background-color: #c3bebe;
+}
+
+/* Tabelas dos usuários online/cadastrados */
 
 table {
     background-color: #f4ffff;
@@ -107,6 +154,10 @@ td, th {
 td img {
     height: 20px;
     cursor: pointer;
+}
+
+.delete {
+    filter: invert(12%) sepia(80%) saturate(7398%) hue-rotate(3deg) brightness(98%) contrast(114%);
 }
 
 .pass {

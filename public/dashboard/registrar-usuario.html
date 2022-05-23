@@ -88,8 +88,15 @@
         <!-- Conteúdo da página -->
         <section class="page-content">
             <!-- Cadastrar um novo usuário -->
-            <section class="form-section">
+            <section>
                 <form>
+                    <div class="txt-center">
+                        <h2>Registrar novo usuário</h2>
+                        <span>Ao registrar, o usuário poderá acessar o sistema utilizando o email e senha
+                            definido.</span>
+                    </div>
+
+                    <!-- Campos do cadastro -->
                     <article class="form-inputs">
                         <div>
                             <input type="text" placeholder=" " id="inp_name">
@@ -106,8 +113,23 @@
                         <div>
                             <input type="password" placeholder=" " id="inp_password">
                             <label for="inp_password">Senha:</label>
+                            <label for="inp_password" class="view-pass"><img src="../img/sistema/svg/eye_closed.svg"></label>
                         </div>
                     </article>
+                    
+                    <!-- Gerador de email e senha -->
+                    <article class="generator">
+                        <div>
+                            <label for="chk_email_gen">Gerar email</label>
+                            <input type="checkbox" id="chk_email_gen">
+                        </div>
+
+                        <div>
+                            <label for="chk_password_gen">Gerar senha</label>
+                            <input type="checkbox" id="chk_password_gen">
+                        </div>
+                    </article>
+
                     <button type="button" class="btn-register" onclick="">Registrar</button>
                 </form>
             </section>
@@ -115,8 +137,11 @@
             <!-- Visualizar usuários online -->
             <section class="users-online">
                 <!-- Pesquisa de usuário -->
-                <article>
-                    <input type="search" placeholder="Procurar usuário" onkeyup="">
+                <article class="user-search">
+                    <div class="div_search">
+                        <input type="search" id="inp_search" placeholder="Procurar usuário" onkeyup="">
+                        <label for="inp_search"><img src="../img/sistema/svg/search.svg"></label>
+                    </div>
                     <select id="search_category" onchange="">
                         <option value="sel_name">Nome</option>
                         <option value="sel_email">Email</option>
@@ -128,6 +153,12 @@
                 <!-- Usuários cadastrados -->
                 <table>
                     <thead>
+                        <tr>
+                            <td class="txt-center" colspan="7">
+                                1 Usuário(s) encontrado
+                            </td>
+                        </tr>
+
                         <tr>
                             <th class="txt-center">#</th>
                             <th>Nome</th>
@@ -150,7 +181,7 @@
                             </td>
                             <td class="txt-center"><img src="../img/sistema/svg/pencil_writing.svg" alt="Editar usuário"
                                     title="Editar usuário"></td>
-                            <td class="txt-center"><img src="../img/sistema/svg/delete.svg" alt="Deletar usuário"
+                            <td class="txt-center delete"><img src="../img/sistema/svg/delete.svg" alt="Deletar usuário"
                                     title="Deletar usuário"></td>
                         </tr>
                     </tbody>
