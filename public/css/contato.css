@@ -2,6 +2,7 @@
     width: 80%;
 }
 
+/*Corpo da área de contato*/
 body {
     width: 100%;
     height: 100vh;
@@ -9,7 +10,9 @@ body {
     justify-content: center;
     background-image: url(../img/inicio/sobrenos/fundobranco.webp);
 }
+/*Fim do corpo*/
 
+/*Dados das forma de contato*/
 .formas_contato{
     display: flex;
     height: 35vh;
@@ -30,6 +33,7 @@ span{
 }
 
 h3{
+    margin-right: 2vw;
     color: #707070;
 }
 
@@ -37,7 +41,9 @@ h4{
     margin-top: 1%;
     color: #688984;    
 }
+/*Fim dos dados*/
 
+/*Inico da área de contato*/
 h2{
     font-size: 55px;
     margin-bottom: 5%;
@@ -54,6 +60,7 @@ h2{
     justify-content: center;
     margin-right: 90%;
     margin-top: 18vh;
+    border: 1px solid #707070;
     border-radius: 20px;
 }
 
@@ -64,7 +71,7 @@ input{
     border-bottom: 1px solid #707070;
     outline: 0px;
     background-color: transparent;
-    color: #000000;
+    color: #3d3d3d;
     flex-wrap: wrap;
 
 }
@@ -80,6 +87,7 @@ input{
     background-color: #ffffff;
     resize: none;
     border-radius: 5px;
+    color: #3d3d3d;
 }
 
 
@@ -102,3 +110,4 @@ input{
     color: #707070;
 }
 
+/*Fim da área de contato*/

@@ -29,9 +29,9 @@
     height: 250px;
     display: flex;
     flex-direction: column-reverse;
-    border: rgb(172, 180, 155) solid 3px;
+    border: hsl(79, 14%, 66%) solid 3px;
     border-radius: 10px;
-    background-color: rgb(172, 180, 155);
+    background-color: hsl(79, 14%, 66%);
     font-weight: lighter;
     align-items: center;
 }

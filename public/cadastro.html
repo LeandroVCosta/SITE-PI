@@ -27,9 +27,9 @@
 
             <ul class="itens_nav">
                 <li><a class="header_item" href="index.html">Início</a></li>
-                <li><a class="header_item" href="#">Simulador</a></li>
+                <li><a class="header_item" href="simulador.html">Simulador</a></li>
                 <li><a class="header_item" href="index.html#sobrenos">Sobre Nós</a></li>
-                <li><a class="header_item" href="#">Equipe</a></li>
+                <li><a class="header_item" href="index.html#equipe">Equipe</a></li>
                 <li><a class="header_item" href="contato.html">Contato</a></li>
             </ul>
 
@@ -48,37 +48,58 @@
     <!--Formulário de cadastro-->
     <main>
         <section class="container">
-            <div class="login">
+            <div class="box_login">
                 <h2>Já possui cadastro?</h2>
                 <button class="btnlog">Login</button>
             </div>
 
             <div class="cadastro">
                 <h2>Cadastro</h2>
-                <form class="formulario">
 
-                    <div class="div_formulario">
-                        <span class="span_form">Nome:</span>
-                        <input class="input" type="text" id="in_nome" placeholder="Seu Nome">
-                    </div>
+                <div class="campo_input">
+                    <input class="input" type="text" id="in_nome" placeholder="Informe seu nome:">
+                </div>
 
-                    <div class="div_formulario">
-                        <span class="span_form">E-mail:</span>
-                        <input class="input" type="email" id="in_email" placeholder="usuario@provedor.com">
-                    </div>
+                <div class="campo_input">
+                    <input class="input" type="email" id="in_email" placeholder="Informe seu e-mail:">
+                </div>
 
-                    <div class="div_formulario">
-                        <span class="span_form">Senha:</span>
-                        <input class="input" type="password" id="in_senha" placeholder="**********">
-                    </div>
+                <div class="campo_input">
+                    <input class="input" type="password" id="in_senha" placeholder="Informe sua senha:">
+                        <img id="img_ocultar" src="img/utilizaveis/oculto.png" alt="ocultar" style="height: 10px;"
+                            onclick="mostrar()">
+                </div>
 
-                    <button class="btn">Continuar</button>
+                <div class="campo_input">
+                    <input class="input" type="password" id="in_senha2" placeholder="Confirme sua senha:">
+                </div>
 
-                </form>
+                <button class="btn">Continuar</button>
+
+            </div>
+
+
+
             </div>
         </section>
     </main>
-
 </body>
-
 </html>
+
+<script>
+
+// Função para revelar a senha
+    function mostrar() {
+
+        if (in_senha.type == "password") {
+            img_ocultar.src = "img//utilizaveis/exibindo.png"
+            in_senha.type = "text"
+            in_senha2.type = "text"
+        } else {
+            img_ocultar.src = "img/utilizaveis/oculto.png"
+            in_senha.type = "password"
+            in_senha2.type = "password"
+        }
+    }
+    // fim da função
+</script>
