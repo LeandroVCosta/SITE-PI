@@ -238,9 +238,18 @@
     height: 220px;
     width: 60%;
     margin-left: 10%;
-    border: black solid 2px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.33);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.sob_titulo {
+    text-align: center;
+}
+
+.sob_paragrafo{
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .sob_img2 {
@@ -283,12 +292,12 @@
 
 
 .equipe>h1 {
-    font-size: 40px;
+    margin-top: 1%;
     color: #688984;
 }
 
 .equipe h3 {
-    color: #688984;
+    color: green;
 }
 
 .integrantes {
@@ -316,13 +325,15 @@
 
 /* inicio footer */
 .foo_titulo {
-    margin-top: 5%;
+    margin-top: 1%;
+    color: #707070;
 }
 footer{
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #ebfff2;
     text-align: center;
+    /*border-top: solid green 2px;*/
 }
 
 .foo_endereco {
@@ -332,7 +343,7 @@ footer{
     flex-direction: column;
     justify-content: space-around;
     gap: 20px;
-    color: white;
+    color: green;
     font-weight: bolder;
 
 }
