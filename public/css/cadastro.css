@@ -118,7 +118,7 @@ h2 {
 /* Fim do brn div-1 */
 
 /* btn div-2 */
-.btnlog {
+.btnLog {
     padding: 25px;
     width: 100%;
     margin: 0 auto;
@@ -136,7 +136,7 @@ h2 {
     width: 80%;
 }
 
-.btnlog:hover {
+.btnLog:hover {
     background-color: #ffffffd7;
 }
 /* Fim do brn div-2 */
