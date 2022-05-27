@@ -53,7 +53,9 @@
                 <button class="btnlog">Login</button>
             </div>
 
-            <div class="cadastro">
+            <!-- Cadastrar usuário -->
+            <div class="cadastro" id="cadastro1">
+
                 <h2>Cadastro</h2>
 
                 <div class="campo_input">
@@ -66,40 +68,38 @@
 
                 <div class="campo_input">
                     <input class="input" type="password" id="in_senha" placeholder="Informe sua senha:">
-                        <img id="img_ocultar" src="img/utilizaveis/oculto.png" alt="ocultar" style="height: 10px;"
-                            onclick="mostrar()">
+                    <img id="img_ocultar" src="img/utilizaveis/oculto.png" alt="ocultar" style="height: 10px;"
+                        onclick="mostrar()">
                 </div>
 
                 <div class="campo_input">
                     <input class="input" type="password" id="in_senha2" placeholder="Confirme sua senha:">
                 </div>
+                
+                <button class="btn" id="btn-next">Avançar</button>
+            </div>
 
-                <button class="btn">Continuar</button>
+            <!-- Cadastrar empresa -->
+            <div class="cadastro" id="cadastro2" style="display: none;">
+                <h2>Cadastro</h2>
+
+                <div class="campo_input">
+                    <input class="input" type="text" id="in_nome" placeholder="Informe o nome da empresa:">
+                </div>
+
+                <div class="campo_input">
+                    <input class="input" type="email" id="in_email" placeholder="Informe o CNPJ da empresa:">
+                </div>
+
+                <button class="btn" id="btn-finish">Cadastrar</button>
+                <span class="btn_voltar" id="btn-back">Voltar</span>
 
             </div>
 
-
-
-            </div>
         </section>
     </main>
 </body>
+
 </html>
 
-<script>
-
-// Função para revelar a senha
-    function mostrar() {
-
-        if (in_senha.type == "password") {
-            img_ocultar.src = "img//utilizaveis/exibindo.png"
-            in_senha.type = "text"
-            in_senha2.type = "text"
-        } else {
-            img_ocultar.src = "img/utilizaveis/oculto.png"
-            in_senha.type = "password"
-            in_senha2.type = "password"
-        }
-    }
-    // fim da função
-</script>
+<script src="js/cadastro.js"></script>

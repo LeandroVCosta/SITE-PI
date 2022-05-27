@@ -135,3 +135,12 @@ h2 {
 /* Fim do brn div-2 */
 
 /* fim do cadastro */
+
+/* cadastro da empresa */
+
+.btn_voltar{
+    font-size: 20px;
+    color: #3c465c;
+    border-bottom: 1px solid #3d3d3d;
+    cursor: pointer;
+}
