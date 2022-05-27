@@ -1,0 +1,137 @@
+/*Esse header é pra não deixar um vão entre a navbar e o topo da tela*/
+header {
+    position: static !important;
+}
+
+
+/*Inicio da tela de cadastro*/
+body {
+    background-image: url(../img/inicio/sobrenos/fundobranco.webp);
+}
+
+.container {
+    margin: auto;
+    height: 480px;
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 5%;
+    color: #707070;
+}
+
+/*Div-1 caso o usuario já tenha cadastro*/
+.box_cadastro {
+    height: 100%;
+    width: 30%;
+    color: white;
+    background-color: #499e4991;
+    display: flex;
+    border: 1px solid #707070;
+    border-left: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+}
+
+/*FIm da div-1*/
+
+/* Div-2 para o usuario fazer o login */
+.login {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 20px);
+    width: 40%;
+    border: 1px solid #707070;
+    border-right: 0;
+    background-color: #86aa837c;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+}
+/* Fim da div-2 */
+
+.campo_input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.campo_input img {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% - 10px);
+}
+
+.input {
+    width: 100%;
+    margin-bottom: 6%;
+    border: none;
+    border-bottom: 1px solid #707070;
+    outline: 0px;
+    background-color: transparent;
+    color: #3d3d3d;
+    flex-wrap: wrap;
+}
+
+::-webkit-input-placeholder {
+    color: #424242;
+    font-weight: bold;
+}
+
+.span_form {
+    padding-left: 35px;
+}
+
+/* btn div-1 */
+.btn {
+    padding: 25px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 900px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #ffffff98;
+    color: #3d3d3d;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffffffd7;
+}
+
+/* Fim do brn div-1 */
+
+/* btn div-2 */
+.btnlog {
+    padding: 25px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 900px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #3d3d3d;
+    cursor: pointer;
+    background-color: #ffffff98;
+}
+
+.btnlog:hover {
+    background-color: #ffffffd7;
+}
+/* Fim do brn div-2 */
+
+/* fim do login */
