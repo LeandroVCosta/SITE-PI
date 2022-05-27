@@ -1,57 +1,66 @@
 /*COMEÇO DO SIMULADOR*/
 
-.simu_content {
+body{
     background-image: url(../img/inicio/sobrenos/fundobranco.webp);
-    /* gap: 20px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.simu_content {
+    gap: 150px;
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-    height: 200h;
+    height: 100vh;
     display: flex;
     font-size: 15px;
     text-align: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.simu_titulo {
-    font-size: 40px;
+
+.h2 {
+    padding: 10px;
+    font-size: 30px;
+    color: #707070;
     margin-top: 10%;
 }
 
-.h2 {
-    font-size: 30px;
-    color: rgb(61, 61, 61);
-}
-
 .simu_box {
-    margin-bottom: 1%;
-    width: 300px;
-    height: 250px;
+    /* margin-top: 20%; */
+    padding-top: 20px;
+    width: 350px;
+    height: 350px;
     display: flex;
-    flex-direction: column-reverse;
-    border: hsl(79, 14%, 66%) solid 3px;
+    flex-direction: column;
+    border: 1px solid #707070;
     border-radius: 10px;
-    background-color: hsl(79, 14%, 66%);
+    background-color: #86aa837c;
     font-weight: lighter;
-    align-items: center;
 }
 
 input {
-    margin: 10px;
-    border: rgb(61, 61, 61) solid 2px;
-    border-radius: 4px;
+    color: #3d3d3d;
+    border: none;
+    border-bottom: 1px solid #707070;
+    outline: 0px;
+    background-color: transparent;
+    margin-top: 20px;
+    margin: 5px;
+    width: 80%;
+    height: 40px;
 }
 
 
 .texto {
-    margin: 10px;
+    /* margin: 10px; */
     font-size: 20px;
     font-weight: bold;
     width: 600px;
-    height: 447px;
-    margin-top: 200px;
-    display: flex;
-    color: rgb(61, 61, 61);
+    /* height: 600px; */
+    /* margin-top: 200px; */
+    display: inline-block;
+    color: #707070;
 }
 
 /*COMEÇO DO POPUP*/
@@ -61,14 +70,16 @@ input {
 }
 
 .btn {
+    width: 65%;
+    height: 35%;
     display: block;
     margin: 20px auto;
-    background: rgb(61, 61, 61);
-    color: white;
-    border: 0;
-    border-radius: 4px;
+    border: 2px solid #99e4c700;
+    border-radius: 20px;
+    background-color: #8fbdab;
     cursor: pointer;
-    padding: 6px 10px;
+    font-size: 25px;
+    color: #ffffff;
 }
 
 .popup-wrapper {

@@ -49,41 +49,38 @@
         <div class="texto">
             <p>
                 Calcule Aqui quanto pode ser o rendimento do seu negócio com os Serviços da AgroConsult. <br><br>
-                
+
                 O valor da saca do milho está cotado hoje em <b style="color: black;">R$ 88,48</b>. <br><br>
 
-                Informações disponibilizadas pela <b style="color: black;">EPAGRI/CEPA (2021)</b>, mostram que uma lavoura de milho de média tecnologia, 
-                com investimento realizado para uma expectativa de rendimento de 140 sacas por Hectare, 
-                possui um custo estimado R$ 5.708,67. Para nível alto de tecnologia e expectativa de rendimento de <b style="color: black;">180 sacas</b>.
+                Informações disponibilizadas pela <b style="color: black;">EPAGRI/CEPA (2021)</b>, mostram que uma
+                lavoura de milho de média tecnologia,
+                com investimento realizado para uma expectativa de rendimento de 140 sacas por Hectare,
+                possui um custo estimado R$ 5.708,67. Para nível alto de tecnologia e expectativa de rendimento de <b
+                    style="color: black;">180 sacas</b>.
             </p>
         </div>
         <div class="simu_box">
+            <h2 class="h2">Simulador Financeiro</h2>
+            <div class="calculadora">
+                <h4><input type="text" placeholder="Campo em hectare" id="tam_lavoura"></h4>
+                <h4> <input type="text" placeholder="Sacas por hectare" id="qtd_sacas"></h4>
+                <button onclick="calcular()" class="btn">Calcular</button>
+                <div class="popup-wrapper">
+                    <div class="popup">
 
-            <div class="simu_texto">
-                <h2 class="h2">Simulador Financeiro</h2>
-                <div class="calculadora">
-                    <h4><input type="text" placeholder="Campo em hectare" id="tam_lavoura"></h4>
-                    <h4> <input type="text" placeholder="Sacas por hectare" id="qtd_sacas"></h4>
-                    <button onclick="calcular()" class="btn">Calcular</button>
-                    <div class="popup-wrapper">
-                        <div class="popup">
-
-                            <div class="popup-close">x</div>
-                            <div class="popup-content">
-                                <p id="resultado"></p>
-                                <a class="popup-link" href="cadastro.html">Saiba mais</a>
-                            </div>
+                        <div class="popup-close">x</div>
+                        <div class="popup-content">
+                            <p id="resultado"></p>
+                            <a class="popup-link" href="cadastro.html">Saiba mais</a>
                         </div>
                     </div>
+                </div>
+            </div><br>
 
 
-
-                </div><br>
-
-            </div>
 
         </div>
-        <p class="fonte">Fontes: 
+        <p class="fonte">Fontes:
             <a href="https://www.melhorcambio.com/milho-hoje ">https://www.melhorcambio.com/milho-hoje</a><br>
             <a href="https://sementesbiomatrix.com.br">https://sementesbiomatrix.com.br</a>
         </p>
