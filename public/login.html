@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" type="image/png" sizes="192x192" href="img/sistema/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="img/sistema/favicon/android-chrome-512x512.png">
     <title>AgroConsult - Cadastro</title>
@@ -45,22 +45,16 @@
 
     <!-- Conteúdo da página -->
 
-    <!--Formulário de cadastro-->
+    <!--Formulário de login-->
     <main>
         <section class="container">
-            <div class="box_login">
-                <h2>Já possui cadastro?</h2>
-                <a class="a_jatemLog" href="login.html"><button class="btnLog">Login</button></a>
+            <div class="box_cadastro">
+                <h2>Não possui cadastro?</h2>
+                <a class="a_naotemCad" href="cadastro.html"><button class="btnCad">Cadastro</button></a>
             </div>
 
-            <!-- Cadastrar usuário -->
-            <div class="cadastro" id="cadastro1">
-
-                <h2>Cadastro</h2>
-
-                <div class="campo_input">
-                    <input class="input" type="text" id="in_nome" placeholder="Informe seu nome:">
-                </div>
+            <div class="login">
+                <h2>Login</h2>
 
                 <div class="campo_input">
                     <input class="input" type="email" id="in_email" placeholder="Informe seu e-mail:">
@@ -68,38 +62,36 @@
 
                 <div class="campo_input">
                     <input class="input" type="password" id="in_senha" placeholder="Informe sua senha:">
-                    <img id="img_ocultar" src="img/utilizaveis/oculto.png" alt="ocultar" style="height: 10px;"
-                        onclick="mostrar()">
+                        <img id="img_ocultar" src="img/utilizaveis/oculto.png" alt="ocultar" style="height: 10px;"
+                            onclick="mostrar()">
                 </div>
 
-                <div class="campo_input">
-                    <input class="input" type="password" id="in_senha2" placeholder="Confirme sua senha:">
-                </div>
-                
-                <button class="btn" id="btn-next">Avançar</button>
-            </div>
-
-            <!-- Cadastrar empresa -->
-            <div class="cadastro" id="cadastro2" style="display: none;">
-                <h2>Cadastro</h2>
-
-                <div class="campo_input">
-                    <input class="input" type="text" id="in_nome" placeholder="Informe o nome da empresa:">
-                </div>
-
-                <div class="campo_input">
-                    <input class="input" type="email" id="in_email" placeholder="Informe o CNPJ da empresa:">
-                </div>
-
-                <button class="btn" id="btn-finish">Cadastrar</button>
-                <span class="btn_voltar" id="btn-back">Voltar</span>
+                <button class="btn">Login</button>
 
             </div>
 
+
+
+            </div>
         </section>
     </main>
 </body>
-
 </html>
 
-<script src="js/cadastro.js"></script>
+<script>
+
+// Função para revelar a senha
+    function mostrar() {
+
+        if (in_senha.type == "password") {
+            img_ocultar.src = "img//utilizaveis/exibindo.png"
+            in_senha.type = "text"
+            in_senha2.type = "text"
+        } else {
+            img_ocultar.src = "img/utilizaveis/oculto.png"
+            in_senha.type = "password"
+            in_senha2.type = "password"
+        }
+    }
+    // fim da função
+</script>

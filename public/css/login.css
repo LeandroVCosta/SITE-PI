@@ -26,7 +26,7 @@ h2 {
 }
 
 /*Div-1 caso o usuario já tenha cadastro*/
-.box_login {
+.box_cadastro {
     height: 100%;
     width: 30%;
     color: white;
@@ -42,12 +42,10 @@ h2 {
     border-top-left-radius: 0;
 }
 
-
-
 /*FIm da div-1*/
 
-/* Div-2 para o usuario fazer o cadastro */
-.cadastro {
+/* Div-2 para o usuario fazer o login */
+.login {
     display: flex;
     flex-direction: column;
     height: calc(100% - 20px);
@@ -118,9 +116,9 @@ h2 {
 /* Fim do brn div-1 */
 
 /* btn div-2 */
-.btnLog {
+.btnCad {
     padding: 25px;
-    width: 100%;
+    width: 100% ;
     margin: 0 auto;
     border-radius: 900px;
     border: none;
@@ -131,23 +129,14 @@ h2 {
     background-color: #ffffff98;
 }
 
-.a_jatemLog{
+.a_naotemCad{
     color: #3d3d3d;
     width: 80%;
 }
 
-.btnLog:hover {
+.btnCad:hover {
     background-color: #ffffffd7;
 }
 /* Fim do brn div-2 */
 
-/* fim do cadastro */
-
-/* cadastro da empresa */
-
-.btn_voltar{
-    font-size: 20px;
-    color: #3c465c;
-    border-bottom: 1px solid #3d3d3d;
-    cursor: pointer;
-}
+/* fim do login */
