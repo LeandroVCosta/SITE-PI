@@ -60,11 +60,13 @@ h2 {
     border-radius: 5px;
     border-top-right-radius: 0;
 }
+
 /* Fim da div-2 */
 
 .campo_input {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 60%;
 }
@@ -73,6 +75,7 @@ h2 {
     position: absolute;
     right: 0;
     bottom: calc(100% - 10px);
+    cursor: pointer;
 }
 
 .input {
@@ -118,7 +121,7 @@ h2 {
 /* btn div-2 */
 .btnCad {
     padding: 25px;
-    width: 100% ;
+    width: 100%;
     margin: 0 auto;
     border-radius: 900px;
     border: none;
@@ -129,7 +132,7 @@ h2 {
     background-color: #ffffff98;
 }
 
-.a_naotemCad{
+.a_naotemCad {
     color: #3d3d3d;
     width: 80%;
 }
@@ -137,6 +140,20 @@ h2 {
 .btnCad:hover {
     background-color: #ffffffd7;
 }
+
 /* Fim do brn div-2 */
 
 /* fim do login */
+
+/* Cor das validações */
+.valid {
+    color: #005e00;
+}
+
+.missing {
+    color: #b88d03
+}
+
+.invalid {
+    color: #830000;
+}

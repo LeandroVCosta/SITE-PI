@@ -20,7 +20,7 @@
 
             <a href="index.html">
                 <div class="logo">
-                    <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
+                    <img src="img/inicio/header/logooriginal.png"Imagem" height="70px">
                     <h1>AgroConsult</h1>
                 </div>
             </a>
@@ -57,41 +57,23 @@
                 <h2>Login</h2>
 
                 <div class="campo_input">
-                    <input class="input" type="email" id="in_email" placeholder="Informe seu e-mail:">
+                    <input class="input" type="email" id="inp_email" placeholder="Informe seu e-mail:">
+                    <span id="warning_email"></span>
                 </div>
 
                 <div class="campo_input">
-                    <input class="input" type="password" id="in_senha" placeholder="Informe sua senha:">
-                        <img id="img_ocultar" src="img/utilizaveis/oculto.png" alt="ocultar" style="height: 10px;"
-                            onclick="mostrar()">
+                    <input class="input" type="password" id="inp_pass" placeholder="Informe sua senha:">
+                    <img id="img_ocultar" src="img/utilizaveis/oculto.png" style="height: 10px;">
+                    <span id="warning_pass"></span>
                 </div>
 
                 <button class="btn">Login</button>
 
             </div>
-
-
-
-            </div>
         </section>
     </main>
 </body>
+
 </html>
 
-<script>
-
-// Função para revelar a senha
-    function mostrar() {
-
-        if (in_senha.type == "password") {
-            img_ocultar.src = "img//utilizaveis/exibindo.png"
-            in_senha.type = "text"
-            in_senha2.type = "text"
-        } else {
-            img_ocultar.src = "img/utilizaveis/oculto.png"
-            in_senha.type = "password"
-            in_senha2.type = "password"
-        }
-    }
-    // fim da função
-</script>
+<script src="js/login.js"></script>

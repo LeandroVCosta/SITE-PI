@@ -62,19 +62,15 @@ h2 {
     border-radius: 5px;
     border-top-right-radius: 0;
 }
+
 /* Fim da div-2 */
 
 .campo_input {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 60%;
-}
-
-.campo_input img {
-    position: absolute;
-    right: 0;
-    bottom: calc(100% - 10px);
 }
 
 .input {
@@ -131,7 +127,7 @@ h2 {
     background-color: #ffffff98;
 }
 
-.a_jatemLog{
+.a_jatemLog {
     color: #3d3d3d;
     width: 80%;
 }
@@ -139,15 +135,29 @@ h2 {
 .btnLog:hover {
     background-color: #ffffffd7;
 }
+
 /* Fim do brn div-2 */
 
 /* fim do cadastro */
 
 /* cadastro da empresa */
 
-.btn_voltar{
+#btn-prev {
     font-size: 20px;
     color: #3c465c;
     border-bottom: 1px solid #3d3d3d;
     cursor: pointer;
+}
+
+/* Cor das validações */
+.valid {
+    color: #005e00;
+}
+
+.missing {
+    color: #b88d03
+}
+
+.invalid {
+    color: #830000;
 }

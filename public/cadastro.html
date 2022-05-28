@@ -20,7 +20,7 @@
 
             <a href="index.html">
                 <div class="logo">
-                    <img src="img/inicio/header/logooriginal.png" alt="Logo Imagem" height="70px">
+                    <img src="img/inicio/header/logooriginal.png" height="70px">
                     <h1>AgroConsult</h1>
                 </div>
             </a>
@@ -59,25 +59,25 @@
 
                 <div class="campo_input">
                     <input class="input" type="text" id="inp_name" placeholder="Informe seu nome:">
-                    <span id="span_nome" style="display: none;">Preencha o campo</span>
+                    <span id="warning_name"></span>
                 </div>
 
                 <div class="campo_input">
                     <input class="input" type="email" id="inp_email" placeholder="Informe seu e-mail:">
-                    <span id="span_email" style="display: none;">Preencha o campo</span>
+                    <span id="warning_email"></span>
                 </div>
 
                 <div class="campo_input">
                     <input class="input" type="password" id="inp_pass" placeholder="Informe sua senha:">
-                    <img id="img_ocultar" src="img/utilizaveis/oculto.png" alt="ocultar" style="height: 10px;"
-                        onclick="mostrar()">
+                    <span id="warning_pass"></span>
                 </div>
 
                 <div class="campo_input">
                     <input class="input" type="password" id="inp_pass_conf" placeholder="Confirme sua senha:">
+                    <span id="warning_pass_conf"></span>
                 </div>
                 
-                <button class="btn" id="btn-next" onclick="valNext()">Avançar</button>
+                <button class="btn" id="btn-next">Avançar</button>
             </div>
 
             <!-- Cadastrar empresa -->
@@ -86,14 +86,16 @@
 
                 <div class="campo_input">
                     <input class="input" type="text" id="inp_name_corp" placeholder="Informe o nome da empresa:">
+                    <span id="warning_name_corp"></span>
                 </div>
 
                 <div class="campo_input">
                     <input class="input" type="email" id="inp_cnpj" placeholder="Informe o CNPJ da empresa:">
+                    <span id="warning_cnpj"></span>
                 </div>
 
-                <button class="btn" id="btn-prev">Cadastrar</button>
-                <span class="btn_voltar" id="btn-prev">Voltar</span>
+                <button class="btn" id="btn-next">Cadastrar</button>
+                <span id="btn-prev">Voltar</span>
             </div>
 
         </section>

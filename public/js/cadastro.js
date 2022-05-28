@@ -1,18 +1,5 @@
-// Função para revelar a senha
-function mostrar() {
-
-    if (in_senha.type == "password") {
-        img_ocultar.src = "img//utilizaveis/exibindo.png"
-        in_senha.type = "text"
-        in_senha2.type = "text"
-    } else {
-        img_ocultar.src = "img/utilizaveis/oculto.png"
-        in_senha.type = "password"
-        in_senha2.type = "password"
-    }
-}
-// fim da função
 // Checando se a senha é válida
+document.getElementById('inp_pass').addEventListener("keyup",passCheck)
 function passCheck() {
     let pass = document.getElementById('inp_pass').value
     let regex = /^(?=.*[@!#$%^&*()/\\])[@!#$%^&*()/\\a-zA-Z0-9]{8,20}$/
@@ -20,44 +7,46 @@ function passCheck() {
     // Verificando se a senha é forte com regex
     if (pass == '') {
         warning_pass.innerHTML = 'Digite uma senha'
-        label_pass.className = 'label-float invalid'
+        warning_pass.className = 'invalid'
         return false
     }
 
     if (regex.test(pass)) {
         warning_pass.innerHTML = ''
-        label_pass.className = 'label-float valid'
+        warning_pass.className = 'valid'
         return true
     } else {
-        label_pass.className = 'label-float missing'
+        warning_pass.className = 'missing'
         warning_pass.innerHTML = 'Use oito ou mais caracteres com uma combinação de letras, números e símbolos: @ ! # $ % ^ & * ( ) / e \\'
         return false
     }
 }
 
 // Checando se as duas senhas são iguais
+document.getElementById('inp_pass_conf').addEventListener("keyup",valPass)
 function valPass() {
     let pass = document.getElementById('inp_pass').value
     let passConf = document.getElementById('inp_pass_conf').value
 
     if (passConf.length >= 6) {
         if (pass == passConf) {
-            label_pass_conf.className = 'label-float valid'
+            warning_pass_conf.className = 'valid'
             warning_pass_conf.innerHTML = ''
             return true
         } else {
-            label_pass_conf.className = 'label-float invalid'
+            warning_pass_conf.className = 'invalid'
             warning_pass_conf.innerHTML = 'As senhas não conferem'
             return false
         }
     } else {
-        label_pass_conf.className = 'label-float missing'
+        warning_pass_conf.className = 'missing'
         warning_pass_conf.innerHTML = 'Senha com menos de 6 digitos'
         return false
     }
 }
 
 // Validando email
+document.getElementById('inp_email').addEventListener("keyup",valEmail)
 function valEmail() {
     let email = document.getElementById('inp_email').value
     let regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi
@@ -65,72 +54,75 @@ function valEmail() {
 
     // Validando email se os caracteres do email é válido
     if (email == '') {
-        label_email.className = 'label-float invalid'
+        warning_email.className = 'invalid'
         warning_email.innerHTML = 'Digite um email válido'
         return false
     }
 
     if (regex.test(email)) {
         warning_email.innerHTML = ''
-        label_email.className = 'label-float valid'
+        warning_email.className = 'valid'
         return true
     } else {
-        label_email.className = 'label-float missing'
+        warning_email.className = 'missing'
         warning_email.innerHTML = 'Digite um email válido'
         return false
     }
 }
 
 // Validando nome
+document.getElementById('inp_name').addEventListener("keyup",valName)
 function valName() {
     let name = document.getElementById('inp_name').value
     let regex = /^[a-z].* {1,}[a-z]{1,}/gi
 
     // Validando a quantidade de palavra e caracteres
     if (name == '') {
-        label_name.className = 'label-float invalid'
+        warning_name.className = 'invalid'
         warning_name.innerHTML = 'Digite seu nome completo'
         return false
     } else if (regex.test(name)) {
         warning_name.innerHTML = ''
-        label_name.className = 'label-float valid'
+        warning_name.className = 'valid'
         return true
     } else {
-        label_name.className = 'label-float missing'
+        warning_name.className = 'missing'
         warning_name.innerHTML = 'Digite seu nome completo'
         return false
     }
 }
 
 // Validando nome da empresa
+document.getElementById('inp_name_corp').addEventListener("keyup",valNameCorp)
 function valNameCorp() {
     let name = document.getElementById('inp_name_corp').value
 
     // Validando a quantidade de palavra e caracteres
     if (name == '') {
-        label_name_corp.className = 'label-float invalid'
+        warning_name_corp.className = 'invalid'
         warning_name_corp.innerHTML = 'Digite o nome da empresa'
         return false
     }
 
     warning_name_corp.innerHTML = ''
-    label_name_corp.className = 'label-float valid'
+    warning_name_corp.className = 'valid'
     return true
 }
 
 // Validando CNPJ
+document.getElementById('inp_cnpj').addEventListener("keyup",valCnpj)
 function valCnpj() {
     let cnpj = document.getElementById('inp_cnpj').value;
     cnpj = cnpj.replace(/[^\d]+/g, '');
 
     if (cnpj == '') {
-        label_cnpj.className = 'label-float invalid'
+        warning_cnpj.className = 'invalid'
         warning_cnpj.innerHTML = 'Digite um CNPJ válido'
         return false;
     }
 
     if (cnpj.length != 14) {
-        label_cnpj.className = 'label-float missing'
+        warning_cnpj.className = 'missing'
         warning_cnpj.innerHTML = 'Digite um CNPJ válido'
         return false;
     }
@@ -146,7 +138,7 @@ function valCnpj() {
         cnpj == "88888888888888" ||
         cnpj == "99999999999999") {
 
-        label_cnpj.className = 'label-float invalid'
+        warning_cnpj.className = 'invalid'
         warning_cnpj.innerHTML = 'CNPJ inválido'
         return false;
     }
@@ -166,7 +158,7 @@ function valCnpj() {
     resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
 
     if (resultado != digitos.charAt(0)) {
-        label_cnpj.className = 'label-float invalid'
+        warning_cnpj.className = 'invalid'
         warning_cnpj.innerHTML = 'CNPJ inválido'
         return false;
     }
@@ -186,16 +178,17 @@ function valCnpj() {
     resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
 
     if (resultado != digitos.charAt(1)) {
-        label_cnpj.className = 'label-float invalid'
+        warning_cnpj.className = 'invalid'
         warning_cnpj.innerHTML = 'Digite um CNPJ válido'
         return false;
     } else {
-        label_cnpj.className = 'label-float valid'
+        warning_cnpj.className = 'valid'
         warning_cnpj.innerHTML = ''
         return true;
     }
 }
 
+document.getElementById('btn-next').addEventListener("click", valNext)
 function valNext() {
     if (!valName() | !valEmail() | !passCheck() | !valPass()) {
         return false
@@ -209,6 +202,7 @@ function valNext() {
     return true
 }
 
+document.getElementById('btn-prev').addEventListener("click", valPrev)
 function valPrev() {
     document.getElementById('register_1').style.display = 'flex'
     document.getElementById('register_2').style.display = 'none'
@@ -227,60 +221,6 @@ function registerCheck() {
 }
 
 // Enviando os dados para o banco
-
 function register() {
-    wait()
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nameUser = inp_name.value;
-    var nameCorp = inp_name_corp.value;
-    var cnpj = inp_cnpj.value;
-    var email = inp_email.value;
-    var position = 'Chefe';
-    var pass = inp_pass.value;
-    // var logo = inp_logo.value;
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
-            nameServer: nameUser,
-            nameCorpServer: nameCorp,
-            emailServer: email,
-            cnpjServer: cnpj,
-            positionServer: position,
-            passServer: pass,
-            // logoServer: logo,
-        })
-    }).then(function (resposta) {
-
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-            // Logando o usuário e mandando para o dashboard/index
-
-            sessionStorage.EMAIL_USUARIO = email;
-            sessionStorage.NOME_USUARIO = nameUser;
-            
-            modalSucess()
-            setTimeout(() => {
-                window.location = "dashboard/index.html";
-            }, 1000);
-        } else {
-            throw ("Houve um erro ao tentar realizar o cadastro!");
-        }
-    }).catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        phrase = "Houve um erro ao tentar realizar o cadastro!"
-        stopWait()
-        modalErro(phrase)
-    });
     
-    return false;
 }
