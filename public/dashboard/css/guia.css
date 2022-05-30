@@ -1,0 +1,92 @@
+/* INICIO - ESTILOS TAGS */
+b {
+    color: black;
+    font-size: 14px;
+}
+
+/* FIM - ESTILOS TAGS */
+
+.title_guia {
+    display: flex;
+    justify-content: space-around;
+    margin: 23px 0;
+}
+
+/* INICIO - Classes genéricas */
+
+
+
+.controlado {
+    color: #025302;
+    background-color: #06c40691;
+}
+
+
+
+.moderado {
+    color: #535202;
+    background-color: #c4c10691;
+}
+
+.critico {
+    color: #530202;
+    background-color: #c4060691;
+}
+
+.legenda {
+    display: flex;
+    justify-content: space-around;
+    margin: 8px -7px 4px 7px;
+}
+
+.legenda div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    padding: 8px;
+    width: 241px;
+    height: 32px;
+}
+
+.legenda_cores {
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0;
+}
+
+.fundo_cor {
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    height: 68%;
+    background-color: #c3bebe;
+}
+
+.txt_legenda {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.txt_controlado {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 289px;
+}
+
+.box {
+    width: 95%;
+    height: 87px;
+    border: 4px solid black;
+    border-radius: 50px;
+    margin-top: 33px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.title_grafico {
+    display: flex;
+    justify-content: space-around;
+    margin: 18px 0;
+}
