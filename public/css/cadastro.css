@@ -21,7 +21,6 @@ body {
 
 h2 {
     font-size: 40px;
-    margin-bottom: 5%;
     color: #707070;
 }
 
@@ -48,6 +47,7 @@ h2 {
 
 /* Div-2 para o usuario fazer o cadastro */
 .cadastro {
+
     display: flex;
     flex-direction: column;
     height: calc(100% - 20px);
@@ -105,6 +105,10 @@ h2 {
     background-color: #ffffff98;
     color: #3d3d3d;
     cursor: pointer;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn:hover {

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +10,6 @@
     <link rel="icon" type="image/png" sizes="512x512" href="img/sistema/favicon/android-chrome-512x512.png">
     <title>AgroConsult</title>
 </head>
-
 <body>
     <!--Inicio do header-->
     <header>
@@ -23,7 +21,6 @@
                     <h1>AgroConsult</h1>
                 </div>
             </a>
-
             <ul class="itens_nav">
                 <li><a class="header_item" href="index.html">Início</a></li>
                 <li><a class="header_item" href="simulador.html">Simulador</a></li>
@@ -31,20 +28,16 @@
                 <li><a class="header_item" href="index.html#equipe">Equipe</a></li>
                 <li><a class="header_item" href="contato.html">Contato</a></li>
             </ul>
-
             <ul class="header_CadLog">
-                <li class="li_Log"><b><a class="a_CadLog" href="login.html">Login</a></b></li>
+                <li class="li_Log"><b><a class="a_CadLog" href="#">Login</a></b></li>
                 <li class="li_Cad"><b><a class="a_CadLog" href="cadastro.html">Cadastro</a></b></li>
             </ul>
-
             <!--Fim dos itens-->
         </nav>
     </header>
     <!--Fim do header-->
-
     <!-- Conteúdo da página -->
     <main class="simu_content">
-
         <!-- Inicio Sobre Nós -->
         <div class="texto">
             <p>
@@ -85,26 +78,20 @@
             <a href="https://sementesbiomatrix.com.br">https://sementesbiomatrix.com.br</a>
         </p>
         <!--footer class="footer">
-
-
             <article>
                 <p class="copy">&copy; <span id="i_ano" style="color: black;"></span> &nbsp; Todos direitos reservados à
                     AgroConsult</p>
             </article>
             </footer-->
     </main>
-
-
     <script src="js/simulador.js"></script>
 </body>
-
 </html>
 <script>
     function calcular() {
         // Pegando o número de sacas e o tamanho da lavoura
         var sacas = Number(qtd_sacas.value)
         var lavoura = Number(tam_lavoura.value)
-
         // Calculando a porcentagem de lucro em relação a média nacional
         var lavoura_media = (100 * lavoura / 90) - 100
         // Calculando a porcentagem de lucro em relação as lavouras mais rentaveis
@@ -113,12 +100,10 @@
         var lavoura_m_sistema = ((100 * lavoura / 90) * 1.16) - 100
         // Calculando a porcentagem de lucro em relação as lavoura mais rentaveis COM nosso sistema
         var lavoura_r_sistema = ((100 * lavoura / 270) * 1.16) - 100
-
         // A safra da lavoura do usuario
         var safra = sacas * lavoura
         // A safra da lavoura do usuario COM nosso sistema
         var safra_sistema = safra * 1.16
-
         // Valor da saca (22/05/2022 às 15:00)
         var valor_saca = 88.48
         // Valor da safra do cliente
@@ -127,17 +112,13 @@
         var lucro_saca_sistema = safra * 88.48 * 1.16
         // Comparando o lucro com ou sem o nosso sistema
         var diferenca_lucro = lucro_saca_sistema - lucro_saca
-
         var frase_final = `<h3>Olá Produtor!</h3><br>`
         frase_final += `Com o nosso sistema, garantimos um aumento de <b style="color: black;">16%</b> na produção do milho.<br>`
         frase_final += `Sua safra será de <b style="color: black;">${(safra_sistema).toFixed(2)}</b> sacas em uma safra.<br>`
         frase_final += `Vendendo a saca por <b style="color: black;">R$ 88,48</b>, o lucro será de <b style="color: black;">R$${(lucro_saca_sistema).toFixed(2)}</b>.<br><br>`
-
         resultado.innerHTML = frase_final
     }
-
     /*var Data_atual = new Date()
     var Ano_atual = Data_atual.getFullYear();
     document.getElementById('i_ano').innerHTML = Ano_atual*/
-
 </script>
