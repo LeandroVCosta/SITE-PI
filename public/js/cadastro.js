@@ -212,12 +212,11 @@ function valPrev() {
 }
 
 function registerCheck() {
-    if (!valCnpj() | !valNameCorp() | !valImg()) {
+    if (!valCnpj() | !valNameCorp()) {
         return false
-    }
-
-    register()
-    return true
+    } 
+        cadastrar()
+        return true
 }
 
 
