@@ -75,7 +75,7 @@ function entrar() {
         },
         body: JSON.stringify({
             emailServer: emailVar,
-            senhaServer: senhaVar
+            senhaServer: senhaVar,
         })
     }).then(function (resposta) {
         console.log("ESTOU NO THEN DO entrar()!")
@@ -89,7 +89,7 @@ function entrar() {
 
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.EMPRESA_CNPJ = json.cnpj;
 
                 setTimeout(function () {
                     window.location = "./dashboard/index.html";
