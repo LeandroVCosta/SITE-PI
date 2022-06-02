@@ -2,7 +2,10 @@
 node_modules
 package-lock.json
 
-site/node_modules
-site/package-lock.json
+src/arduino/node_modules
+src/arduino/package-lock.json
+
+src/node_modules
+src/package-lock.json
 
 .github

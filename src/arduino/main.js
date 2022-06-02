@@ -85,7 +85,7 @@ const serial = async (
                 // Este insert irá inserir os dados na tabela "DadosSensor" -> altere se necessário
                 // Este insert irá inserir dados de fkSensor id=1 >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
-                    'INSERT INTO dadosSensor (temperatura, umidade, horario, FkSensor) VALUES (?, ?, now(), 1)',
+                    'INSERT INTO dadosSensor (temperatura, umidade, horario, fkSensor) VALUES (?, ?, now(), 1)',
                     [dht11Temperatura, dht11Umidade]
                 );
                 console.log("valores inseridos no banco: ", dht11Umidade + ", " + dht11Temperatura)

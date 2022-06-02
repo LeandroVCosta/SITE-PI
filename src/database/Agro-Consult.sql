@@ -55,5 +55,3 @@ CREATE USER 'machine'@'localhost' IDENTIFIED BY '#0_M@ris&s_Mach1ne_0@';
 GRANT INSERT ON AgroConsult. * TO 'machine'@'localhost';
 
 FLUSH PRIVILEGES;
-
--- Para sql server - remoto - produção

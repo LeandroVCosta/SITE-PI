@@ -3,10 +3,10 @@ var sql = require('mssql');
 
 // CONEXÃO DO SQL SERVER - AZURE (NUVEM)
 var sqlServerConfig = {
-    server: "SEU_SERVIDOR",
-    database: "SEU_BANCO_DE_DADOS",
-    user: "SEU_USUARIO",
-    password: "SUA_SENHA",
+    server: "agroconsult.database.windows.net",
+    database: "agroconsult",
+    user: "agro_system",
+    password: "#Syst&m_Contr0l",
     pool: {
         max: 10,
         min: 0,
@@ -20,9 +20,9 @@ var sqlServerConfig = {
 // CONEXÃO DO MYSQL WORKBENCH (LOCAL)
 var mySqlConfig = {
     host: "localhost",
-    database: "AGROCONSULT",
-    user: "aluno",
-    password: "sptech"
+    database: "AgroConsult",
+    user: "system",
+    password: "#5_Sys_C0ntr0l_5@"
 };
 
 function executar(instrucao) {
