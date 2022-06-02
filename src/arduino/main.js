@@ -66,10 +66,10 @@ const serial = async (
 
                 // Este insert irá inserir os dados na tabela "DadosSensor" -> altere se necessário
                 // Este insert irá inserir dados de fkSensor id=1 >> você deve ter o aquario de id 1 cadastrado.
-                sqlquery = `INSERT INTO dadosSensor (temperatura, umidade, horario, fkSensor) VALUES (${dht11Umidade}, ${dht11Temperatura}, CURRENT_TIMESTAMP, 1)`;
+                sqlquery = `INSERT INTO dadosSensor (temperatura, umidade, horario, fkSensor) VALUES (${dht11Temperatura}, ${dht11Umidade}, CURRENT_TIMESTAMP, 1)`;
 
                 // CREDENCIAIS DO BANCO REMOTO - SQL SERVER
-                const connStr = "Server=agroconsult.database.windows.net;Database=agroconsult;User Id=agro_system;Password=#Syst&m_Contr0l;";
+                const connStr = "Server=agroconsult.database.windows.net;Database=agroconsult;User Id=machine;Password=#0_M@ris&s_Mach1ne_0@;";
 
                 function inserirComando(conn, sqlquery) {
                     conn.query(sqlquery);
