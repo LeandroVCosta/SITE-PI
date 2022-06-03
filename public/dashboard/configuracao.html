@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/configuracao.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/sistema/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../img/sistema/favicon/android-chrome-512x512.png">
+    <title>AgroConsult</title>
+</head>
+
+<body>
+    <header class="container">
+        <img class="ml-5" src="../img/sistema/logo-agroconsult.png" alt="Logo da empresa que usa o sistema">
+
+        <nav class="navbar top-bar">
+            <ul>
+                <li><img src="../img/sistema/svg/notification.svg" alt="Notificações" title="Notificação"></li>
+                <li><img src="../img/sistema/svg/help.svg" alt="Ajuda da página" title="Ajuda rápida"></li>
+            </ul>
+
+            <div class="navbar">
+                <span id="span_user">Sample</span>
+                <img src="../img/sistema/svg/down-arrow.svg" alt="Menu com queda">
+                <ul class="navbar drop">
+                    <li>
+                        <a href="configuracao.html">
+                            <img src="../img/sistema/svg/settings.svg" alt="Guia de como usar o sistema">
+                            <span>Configuração</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="logout">
+                            <img src="../img/sistema/svg/logout.svg" alt="Sair do site">
+                            <span>Sair</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Área de contato-->
+    <div class="container">
+        <div class="box_contato">
+            <h2>Perfil</h2>
+            <div class="perfil">
+                <input class="in_contato" name="Nome" placeholder="Informe seu nome:" type="text" disabled >
+                <a class="a_alterar" href="">Alterar Nome</a>
+            </div>
+            <div class="perfil">
+                <input class="in_contato" name="Nome" placeholder="Informe seu nome:" type="text" disabled>
+                <a class="a_alterar" href="">Alterar E-mail</a>
+            </div>
+            <div class="perfil">
+                <input class="in_contato" name="Nome" placeholder="Informe seu nome:" type="text" disabled>
+                <a class="a_alterar" href="">Alterar Senha</a>
+            </div>
+
+            <button class="btn_contato">Enviar</button>
+
+        </div>
+    </div>
+    <!--Fim da área de contato-->
+
+</body>
+
+</html>

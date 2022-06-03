@@ -1,0 +1,87 @@
+/*Corpo da área de contato*/
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+/*Fim do corpo*/
+
+/*Dados das forma de contato*/
+
+.box_contato {
+    position: relative;
+    margin: auto;   
+    display: flex;
+    height: 75vh;
+    width: 35vw;
+    background-color: #86aa837c;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 40px;
+    margin-bottom: 8%;
+}
+
+.in_contato {
+    display: flex;
+    margin-top: 5%;
+    height: 5vh;
+    width: 55%;
+    margin-bottom: 2%;
+    border: 2px solid #707070;
+    background-color: transparent;
+    color: #3d3d3d;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.perfil{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+input{
+    text-indent: 4%;
+}
+
+::-webkit-input-placeholder {
+    
+    color: #707070;
+    font-weight: bold;
+}
+
+.a_alterar{
+    margin-top: 2%;
+}
+
+.btn_contato {
+    height: 15%;
+    width: 30%;
+    padding: 20px;
+    border: 2px solid #99e4c700;
+    border-radius: 20px;
+    background-color: #8fbdab;
+    cursor: pointer;
+    font-size: 25px;
+    color: #ffffff;
+    margin-top: 10%;
+}
+
+.btn_contato:hover {
+    background-color: #afd3c5;
+    color: #707070;
+}
+
+/*Fim da área de contato*/
