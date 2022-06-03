@@ -16,7 +16,7 @@ function entrar(email, senha) {
 	        FROM Usuario
 		        JOIN Empresa
 			        ON idEmpresa = fkEmpresa
-		    WHERE email = '${email}' AND senha = MD5('${senha}');
+		    WHERE email = '${email}' AND senha = MD5('${senha}')
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -38,7 +38,7 @@ function cadastrar(nome, email, senha, cargo, nomecorp, cnpj) {
 
     var instrucao = `
         INSERT INTO Usuario (nomeUsuario, email, cargo, senha, fkEmpresa)
-        VALUES ('${nome}', '${email}', '${cargo}', MD5('${senha}'), (select idEmpresa from Empresa where CNPJ = '${cnpj}'));`;
+        VALUES ('${nome}', '${email}', '${cargo}', '${senha}', (select idEmpresa from Empresa where CNPJ = '${cnpj}'))`;
     console.log("Executando a cadastro Usuario: \n" + instrucao);
     return database.executar(instrucao);
 
