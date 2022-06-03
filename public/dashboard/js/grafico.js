@@ -44,7 +44,7 @@ function chartGen(idFazenda) {
         <section class="dash-container">
             <article class="fill">
                 <div style="position: relative; height:93.5%; width:100%">
-                    <canvas id="chart_1" width="1200" height="281"></canvas>
+                    <canvas id="canvas_grafico" width="1200" height="281"></canvas>
                 </div>
             </article>
         </section>
@@ -325,10 +325,13 @@ function obterDadosGrafico(fkSensor) {
 
     fetch(`/medidas/ultimas/${fkSensor}`, { cache: 'no-store' }).then(function (response) {
         if (response.ok) {
+            console.log("Obtendo dados: Resposta Ok")
+            
             response.json().then(function (resposta) {
                 console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                 resposta.reverse();
 
+                console.log("Indo plotar gráfico")
                 plotarGrafico(resposta, fkSensor);
             });
         } else {
@@ -370,7 +373,7 @@ function plotarGrafico(resposta, fkSensor) {
 
     for (i = 0; i < resposta.length; i++) {
         var registro = resposta[i];
-        dados.labels.push(registro.momento_grafico);
+        dados.labels.push(registro.horario);
         dados.datasets[0].data.push(registro.umidade);
         dados.datasets[1].data.push(registro.temperatura);
     }
@@ -378,8 +381,9 @@ function plotarGrafico(resposta, fkSensor) {
     console.log(JSON.stringify(dados));
 
 
-    const chart = document.getElementById('chart_1').getContext('2d')
-    const chartConfig = new Chart(chart, {
+    // const chart = document.getElementById('chart_1').getContext('2d')
+    var ctx = canvas_grafico.getContext('2d');
+    window.grafico_linha = Chart.Line(ctx, {
         data: dados,
         options: {
             responsive: true,
@@ -419,6 +423,7 @@ function plotarGrafico(resposta, fkSensor) {
             }
         }
     });
+    console.log("Plotando gráfico =)")
 
     setTimeout(() => atualizarGrafico(fkSensor, dados), 2000);
 }
@@ -430,6 +435,7 @@ function plotarGrafico(resposta, fkSensor) {
 //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
 //     Para ajustar o "select", ajuste o comando sql em src/models
 function atualizarGrafico(fkSensor, dados) {
+    // console.log("Indo atualizar gráfico")
 
     fetch(`/medidas/tempo-real/${fkSensor}`, { cache: 'no-store' }).then(function (response) {
         if (response.ok) {
@@ -440,7 +446,7 @@ function atualizarGrafico(fkSensor, dados) {
 
                 // tirando e colocando valores no gráfico
                 dados.labels.shift(); // apagar o primeiro
-                dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
+                dados.labels.push(novoRegistro[0].horario); // incluir um novo momento
 
                 dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                 dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade

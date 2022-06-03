@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/grafico.css">
     <link rel="stylesheet" href="css/global.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <link rel="icon" type="image/png" sizes="192x192" href="../img/sistema/favicon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="../img/sistema/favicon/android-chrome-512x512.png">
     <title>AgroConsult - Gráficos</title>
@@ -147,8 +148,12 @@
 
             <!-- Gráficos da fazenda selecionada -->
             <section id="farm_conteudo">
-                <div class="graph">
+                <!-- <div class="graph">
                     <canvas id="chart1"></canvas>
+                </div> -->
+
+                <div class="graph">
+                    <!-- <canvas id="canvas_grafico"></canvas> -->
                 </div>
             </section>
 
