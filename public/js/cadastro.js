@@ -219,7 +219,6 @@ function registerCheck() {
         return true
 }
 
-
 function cadastrar() {
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
@@ -228,6 +227,7 @@ function cadastrar() {
     var senhaVar = inp_pass.value;
     var nomeempresa = inp_name_corp.value;
     var cnpj = inp_cnpj.value
+    var cargo = 'Chefe'
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
         method: "POST",
@@ -241,15 +241,14 @@ function cadastrar() {
             emailServer: emailVar,
             senhaServer: senhaVar,
             nomeempresaServer: nomeempresa,
-            cnpjServer: cnpj
+            cnpjServer: cnpj,
+            cargoServer: cargo
         })
     }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            cardErro.style.display = "block";
-
             alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
             setTimeout(() => {

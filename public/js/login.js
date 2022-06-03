@@ -1,5 +1,4 @@
 // Função para revelar a senha
-
 document.getElementById('img_ocultar').addEventListener("click", mostrar)
 function mostrar() {
 
@@ -60,8 +59,8 @@ function valEmail() {
     }
 }
 
+// Função para logar
 function entrar() {
-
     var emailVar = inp_email.value;
     var senhaVar = inp_pass.value;
 
@@ -87,9 +86,11 @@ function entrar() {
                 console.log(json);
                 console.log(JSON.stringify(json));
 
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.USUARIO_EMAIL = json.email;
+                sessionStorage.USUARIO_NOME = json.nomeUsuario;
+                sessionStorage.USUARIO_CARGO = json.cargo;
                 sessionStorage.EMPRESA_CNPJ = json.cnpj;
+                sessionStorage.ID_EMPRESA = json.fkEmpresa;
 
                 setTimeout(function () {
                     window.location = "./dashboard/index.html";
@@ -100,5 +101,3 @@ function entrar() {
         } 
     })
 }
-
-// Função para logar

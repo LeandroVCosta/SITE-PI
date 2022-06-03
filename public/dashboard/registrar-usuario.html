@@ -25,7 +25,7 @@
             </ul>
 
             <div class="navbar">
-                <span>Sample</span>
+                <span id="span_user">Sample</span>
                 <img src="../img/sistema/svg/down-arrow.svg" alt="Menu com queda">
                 <ul class="navbar drop">
                     <li>
@@ -36,7 +36,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="#" id="logout">
                             <img src="../img/sistema/svg/logout.svg" alt="Sair do site">
                             <span>Sair</span>
                         </a>
@@ -67,7 +67,7 @@
                     </a>
                 </li>
                 <li class="list active">
-                    <a href="#">
+                    <a href="#" id="register-user">
                         <figure>
                             <img src="../img/sistema/svg/account-group.svg" alt="Página para registrar usúarios">
                             <figcaption>Registrar usúarios</figcaption>
@@ -101,19 +101,23 @@
                         <div>
                             <input type="text" placeholder=" " id="inp_name">
                             <label for="inp_name">Nome:</label>
+                            <span id="warning_name"></span>
                         </div>
                         <div>
                             <input type="email" placeholder=" " id="inp_email">
                             <label for="inp_email">Email:</label>
+                            <span id="warning_email"></span>
                         </div>
                         <div>
                             <input type="text" placeholder=" " id="inp_position">
                             <label for="inp_position">Cargo:</label>
+                            <span id="warning_position"></span>
                         </div>
                         <div>
-                            <input type="password" placeholder=" " id="inp_password">
-                            <label for="inp_password">Senha:</label>
-                            <label for="inp_password" class="view-pass"><img src="../img/sistema/svg/eye_closed.svg"></label>
+                            <input type="password" placeholder=" " id="inp_pass">
+                            <label for="inp_pass">Senha:</label>
+                            <label for="inp_pass" class="view-pass"><img id="label-img" src="../img/sistema/svg/eye_closed.svg"></label>
+                            <span id="warning_pass"></span>
                         </div>
                     </article>
                     
@@ -130,7 +134,7 @@
                         </div>
                     </article>
 
-                    <button type="button" class="btn-register" onclick="">Registrar</button>
+                    <button type="button" class="btn-register">Registrar</button>
                 </form>
             </section>
 
@@ -142,7 +146,7 @@
                         <input type="search" id="inp_search" placeholder="Procurar usuário" onkeyup="">
                         <label for="inp_search"><img src="../img/sistema/svg/search.svg"></label>
                     </div>
-                    <select id="search_category" onchange="">
+                    <select id="search_category">
                         <option value="sel_name">Nome</option>
                         <option value="sel_email">Email</option>
                         <option value="sel_position">Cargo</option>
@@ -193,6 +197,6 @@
 </body>
 
 <script src="js/global.js"></script>
-<!-- <script src="js/registrar-usuario.js"></script> -->
+<script src="js/registrar-usuario.js"></script>
 
 </html>
