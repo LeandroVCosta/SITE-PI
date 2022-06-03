@@ -43,13 +43,15 @@
             <p>
                 Calcule Aqui quanto pode ser o rendimento do seu negócio com os Serviços da AgroConsult. <br><br>
 
-                O valor da saca do milho está cotado hoje em <b style="color: black;">R$ 88,48</b>. <br><br>
+                O valor da saca do milho está cotado hoje em <b class="bold">R$ 88,48</b>. <br><br>
 
-                Informações disponibilizadas pela <b style="color: black;">EPAGRI/CEPA (2021)</b>, mostram que uma
+                Informações disponibilizadas pela <b class="bold">EPAGRI/CEPA (2021)</b>, mostram que uma
                 lavoura de milho de média tecnologia,
                 com investimento realizado para uma expectativa de rendimento de 140 sacas por Hectare,
-                possui um custo estimado R$ 5.708,67. Para nível alto de tecnologia e expectativa de rendimento de <b
-                    style="color: black;">180 sacas</b>.
+                possui um custo estimado R$ 5.708,67. Para nível alto de tecnologia e expectativa de rendimento de 
+                <b class="bold">180 sacas</b> <br><br>
+
+                    De acordo com a Conab, a produtividade média de milho no Brasil foi de <b class="bold">4.366 kg/ha</b>  na safra, no período entre 2020 e 2021.
             </p>
         </div>
         <div class="simu_box">
@@ -64,7 +66,7 @@
                         <div class="popup-close">x</div>
                         <div class="popup-content">
                             <p id="resultado"></p>
-                            <a class="popup-link" href="cadastro.html">Saiba mais</a>
+                            <a class="popup-link" href="cadastro.html">Cadastrar-se</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +81,7 @@
         </p>
         <!--footer class="footer">
             <article>
-                <p class="copy">&copy; <span id="i_ano" style="color: black;"></span> &nbsp; Todos direitos reservados à
+                <p class="copy">&copy; <span id="i_ano" class="bold"></span> &nbsp; Todos direitos reservados à
                     AgroConsult</p>
             </article>
             </footer-->
@@ -92,6 +94,7 @@
         // Pegando o número de sacas e o tamanho da lavoura
         var sacas = Number(qtd_sacas.value)
         var lavoura = Number(tam_lavoura.value)
+
         // Calculando a porcentagem de lucro em relação a média nacional
         var lavoura_media = (100 * lavoura / 90) - 100
         // Calculando a porcentagem de lucro em relação as lavouras mais rentaveis
@@ -114,8 +117,8 @@
         var diferenca_lucro = lucro_saca_sistema - lucro_saca
         var frase_final = `<h3>Olá Produtor!</h3><br>`
         frase_final += `Com o nosso sistema, garantimos um aumento de <b style="color: black;">16%</b> na produção do milho.<br>`
-        frase_final += `Sua safra será de <b style="color: black;">${(safra_sistema).toFixed(2)}</b> sacas em uma safra.<br>`
-        frase_final += `Vendendo a saca por <b style="color: black;">R$ 88,48</b>, o lucro será de <b style="color: black;">R$${(lucro_saca_sistema).toFixed(2)}</b>.<br><br>`
+        frase_final += `Assim sua safra será de <b class="bold">${(safra_sistema).toFixed(0)}</b> sacas em uma safra.<br>`
+        frase_final += `Vendendo a saca por <b class="bold">R$ 88,48</b>, o lucro será de <b class="bold">R$${(lucro_saca_sistema).toFixed(2)}</b>.<br><br>`
         resultado.innerHTML = frase_final
     }
     /*var Data_atual = new Date()

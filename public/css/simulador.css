@@ -50,7 +50,9 @@ input {
     padding-top: 30px;
 }
 
-
+.bold{
+    color: #000000;
+}
 .texto {
     /* margin: 10px; */
     font-size: 20px;
