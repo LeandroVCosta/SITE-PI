@@ -16,7 +16,7 @@ function entrar(email, senha) {
 	        FROM Usuario
 		        JOIN Empresa
 			        ON idEmpresa = fkEmpresa
-		    WHERE email = '${email}' AND senha = MD5('${senha}')
+		    WHERE email = '${email}' AND senha = '${senha}'
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
