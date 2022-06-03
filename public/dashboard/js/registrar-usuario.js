@@ -124,7 +124,7 @@ function register() {
     let passVar = inp_pass.value;
     let positionVar = inp_position.value;
     // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
+    fetch("../../../usuarios/cadastrar", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
