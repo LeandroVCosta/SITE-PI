@@ -41,38 +41,44 @@
 /*car_texto são os texto que aparecem no carrossel*/
 
 .car_texto1 {
-    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
     color: #ffffff;
-    font-size: 27px;
+    font-size: 35px;
     position: relative;
-    bottom: 80%;
-    left: 6%;
+    bottom: 73%;
     z-index: 1;
 }
 
 .grifado {
-    color: green;
+    background-color: rgba(0,99,0, 1.0);
 }
 
 .car_texto2 {
-    width:
-        50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:100%;
     color: #ffffff;
-    font-size: 27px;
+    font-size: 35px;
     position: relative;
-    bottom: 80%;
-    left: 6%;
+    bottom: 73%;
     z-index: 1;
 }
 
 .car_texto3 {
-    width:
-        40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:100%;
     color: #ffffff;
-    font-size: 27px;
+    font-size: 35px;
     position: relative;
-    bottom: 80%;
-    left: 6%;
+    bottom: 73%;
     z-index: 1;
 }
 
@@ -192,10 +198,11 @@
 
 #sobrenos {
     /*DELIMITANDO O TAMANHO DO SOBRE NÓS*/
-    background-image: url(../img/inicio/sobrenos/fundobranco.webp);
+    background-image: url(../img/inicio/sobrenos/middle-view-man-in-a-cornfield\ \(1\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 176vh;
+    background-position-y: -0px;
+    height: 145vh;
     display: flex;
     flex-direction: column;
     font-size: 20px;
@@ -216,9 +223,8 @@
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 10%;
-    border: green solid 3px;
     border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.33);
+
     align-items: center;
 }
 
@@ -235,14 +241,17 @@
 
 .sob_texto {
     /*DIV COM O TEXTO SEPARADO DA IMAGEM*/
-    height: 220px;
+    font-size: 25px;
+    height: 300px;
     width: 60%;
     margin-left: 10%;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 88, 0, 0.8);
+    font-weight: bolder;
 }
 
 .sob_titulo {
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -326,31 +335,51 @@
 /* inicio footer */
 .foo_titulo {
     margin-top: 1%;
-    color: #707070;
+    color: white;
+}
+
+.foo_titulo:hover{
+   color: #86c286;
+   cursor: pointer;
 }
 footer{
     display: flex;
     flex-direction: column;
-    background-color: #ebfff2;
+    background-color: #1f611f;
     text-align: center;
     /*border-top: solid green 2px;*/
 }
 
 .foo_endereco {
+    list-style: none;
     margin-top: 30px;
     padding-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 20px;
-    color: green;
+    color: white;
     font-weight: bolder;
-
+}
+.foo_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.foo_title{
+    margin-left: 3%;
+}
+.foo_title:hover {
+    color: #86c286;
 }
 
-.mapa {
+.foo_img {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    align-self: center;
+
 }
