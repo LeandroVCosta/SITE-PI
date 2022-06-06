@@ -1,4 +1,4 @@
-/*Corpo da área de contato*/
+/*Corpo da área de configuração*/
 body {
     width: 100%;
     height: 100vh;
@@ -7,9 +7,9 @@ body {
 
 /*Fim do corpo*/
 
-/*Dados das forma de contato*/
+/*Área configuração*/
 
-.box_contato {
+.box_config {
     position: relative;
     margin: auto;   
     display: flex;
@@ -30,7 +30,7 @@ h1{
     margin-bottom: 8%;
 }
 
-.in_contato {
+.in_config {
     display: flex;
     margin-top: 5%;
     height: 5vh;
@@ -72,4 +72,4 @@ input{
     width: 22%;
 }
 
-/*Fim da área de contato*/
+/*Fim da área de configuração*/
