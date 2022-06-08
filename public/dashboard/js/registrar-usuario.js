@@ -116,15 +116,16 @@ function registerCheck() {
     register()
 }
 
-function register() {
+function registraruser() {
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    let nameVar = inp_name.value;
-    let emailVar = inp_email.value;
-    let passVar = inp_pass.value;
-    let positionVar = inp_position.value;
+    var nomeVar = inp_name.value;
+    var emailVar = inp_email.value;
+    var senhaVar = inp_pass.value;
+    var cnpj = sessionStorage.EMPRESA_CNPJ;
+    var cargo = inp_position.value
     // Enviando o valor da nova input
-    fetch("../../../usuarios/cadastrar", {
+    fetch("/usuarios/registraruser", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -132,17 +133,19 @@ function register() {
         body: JSON.stringify({
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
-            nameServer: nameVar,
+            nomeServer: nomeVar,
             emailServer: emailVar,
-            passServer: passVar,
-            positionServer: positionVar
+            senhaServer: senhaVar,
+            cnpjServer: cnpj,
+            cargoServer: cargo
         })
     }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            alert("Funcionário cadastro com sucesso com sucesso!");
+            alert("Usuario Registrado com Sucesso!");
+
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }
