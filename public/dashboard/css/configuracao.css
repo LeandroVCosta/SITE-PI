@@ -46,10 +46,11 @@ h1{
 
 .perfil{
     display: flex;
+    flex-direction: column;
     width: 80%;
     align-items: center;
     justify-content: center;
-    gap: 5%;
+    gap: 3%;
 }
 
 input{
@@ -65,11 +66,13 @@ input{
 
 .a_alterar{
     text-align: center;
-    margin-top: 4%;
     font-size: 20px;
-    border-bottom: 2px solid #4993a0;
     color: #42909e;
-    width: 22%;
+    width: 35%;
+}
+
+.a_alterar:hover{
+    color: #3374a3;
 }
 
 /*Fim da área de configuração*/

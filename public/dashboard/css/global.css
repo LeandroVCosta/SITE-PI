@@ -47,7 +47,7 @@ button {
 }
 
 header {
-    position: relative;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;

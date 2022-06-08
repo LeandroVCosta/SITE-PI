@@ -22,7 +22,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "AgroConsult",
     user: "root",
-    password: "root"
+    password: "12345"
 };
 
 function executar(instrucao) {

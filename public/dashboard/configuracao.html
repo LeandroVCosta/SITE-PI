@@ -49,16 +49,17 @@
         <div class="box_config">
             <h1>Perfil</h1>
             <div class="perfil">
-                <input class="in_config" name="Nome"  type="text" disabled >
+                <input id="nomeUsuario" class="in_config" name="Nome" type="text" disabled>
+                <a class="a_alterar" onclick="editar()" href="">Alterar Nome</a>
             </div>
             <div class="perfil">
-                <input class="in_config" name="Email"  type="text" disabled>
+                <input id="emailUsuario" class="in_config" name="Email" type="text" disabled>
             </div>
             <div class="perfil">
-                <input class="in_config" name="Senha"  type="text" disabled>
+                <input id="cargoUsuario" class="in_config" name="cargo" type="text" disabled>
             </div>
 
-            <a class="a_alterar" href="">Modificar Perfil</a>
+
 
         </div>
     </div>
@@ -67,3 +68,22 @@
 </body>
 
 </html>
+
+<script>
+    nomeUsuario.value = sessionStorage.USUARIO_NOME
+    emailUsuario.value = sessionStorage.USUARIO_EMAIL
+    cargoUsuario.value = sessionStorage.USUARIO_CARGO
+
+    var nome = sessionStorage.USUARIO_NOME
+
+
+    if (nomeUsuario.type == "text disabled")
+
+
+        function editar() {
+
+            if (nomeUsuario.type == "text disabled") {
+                nomeUsuario.type = "text"
+            } 
+        }
+</script>
