@@ -92,13 +92,15 @@ main {
 /* Local onde todo o conteúdo da página estará */
 .page-content {
     position: absolute;
+    flex-direction: column;
+    display: flex;
     top: calc(var(--header-height) + 10px);
     right: 0;
     bottom: 0;
     left: calc(var(--sideBar-width) + 35px);
     width: 90%;
     border-radius: 10px;
-    background-color: #f5deb3;
+    background-color: #ffffff;
     transition: 500ms;
 }
 

@@ -1,0 +1,27 @@
+.inf{
+margin: auto;
+bottom: 20%;
+text-align: center;
+}
+
+.user {
+    padding: 40px 0;
+    float: left;
+    margin-left: 80%;
+    display: inline-flexbox;
+}
+
+.user .nome{
+    margin-left: 10%;
+    padding-right: 100%;
+    padding: 3px 2px;
+    width: 80%;
+    background-color: silver;
+    white-space: nowrap;
+}
+
+.user-imagem {
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+}
