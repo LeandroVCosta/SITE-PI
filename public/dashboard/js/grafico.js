@@ -1,4 +1,4 @@
-'   let proximaAtualizacao;
+let proximaAtualizacao;
 
 window.onload = obterDadosGrafico(1);
 
