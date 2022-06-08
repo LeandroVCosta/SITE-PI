@@ -1,0 +1,37 @@
+.btn_fazendas {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 10%;
+   height: 12vh;
+   margin-top: 5%;
+   margin-left: 5%;
+}
+
+.btn_sel_fazenda {
+   width: 12%;
+   height: 90%;
+   color: green;
+   border: solid 2px green;
+   border-radius: 20px;
+   font-weight: bolder;
+}
+
+.corpo {
+   display: flex;
+   flex-direction: column;
+}
+
+.titulo {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   margin-top: 2%;
+   margin-left: 5%;
+}
+
+.titulofzd {
+   font-weight: bolder;
+   font-size: 20px;
+   color: green;
+}

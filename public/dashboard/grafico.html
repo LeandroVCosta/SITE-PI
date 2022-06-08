@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dash_style.css">
     <link rel="stylesheet" href="css/grafico.css">
     <link rel="stylesheet" href="css/global.css">
     <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
@@ -86,82 +87,23 @@
             </ul>
         </aside>
 
-        <section class="page-content">
-            <!-- Legenda da métricas -->
-            <section class="legenda">
-                <div class="controlado">
-                    <span> <img src="../img/sistema/svg/full-circle.svg"> Temperatura ideal: <b>24°</b> entre
-                        <b>30°</b></span>
-                    <span> <img src="../img/sistema/svg/full-circle.svg"> Umidade ideal: <b>16%</b> entre
-                        <b>18%</b></span>
-                </div>
 
-                <div class="moderado">
-                    <span> <img src="../img/sistema/svg/full-circle.svg"> Temperatura moderada: <b>23°</b> e
-                        <b>31°</b></span>
-                    <span> <img src="../img/sistema/svg/full-circle.svg"> Umidade moderada: <b>15%</b> e
-                        <b>19%</b></span>
-                </div>
+            <div class="btn_fazendas">
+                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(1)">FAZENDA 1</button>
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(2)">FAZENDA 2</button>
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(3)">FAZENDA 3</button>
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(4)">FAZENDA 4</button>
+            </div>
+            <div class="corpo">
+                <h3 class="titulo">O gráfico está exibindo os dados da <b class="titulofzd" id="titulofazenda"></b></h3>
+            </div>
+        <div class="graph">
+            <canvas id="canvas_grafico"></canvas>
+        </div>
+    </div>
+</div>
 
-                <div class="critico">
-                    <span> <img src="../img/sistema/svg/full-circle.svg"> Temperatura crítica: <b>22°</b> ou menos e
-                        <b>32°</b> ou mais</span>
-                    <span> <img src="../img/sistema/svg/full-circle.svg"> Umidade crítica: <b>14%</b> ou menos e
-                        <b>20%</b>
-                        ou mais</span>
-                </div>
-            </section>
-
-            <!-- Métricas e gráficos -->
-            <section class="dash-container">
-                <!-- A maior/menor temperatura registrada no momento -->
-                <article class="metrica controlado">
-                    <span>Menor Temperatura</span>
-                    <div class="circulo">
-                        <span id="min_celsius">24°</span>
-                    </div>
-                </article>
-                <article class="metrica moderado">
-                    <span>Maior Temperatura</span>
-                    <div class="circulo">
-                        <span id="max_celsius">31°</span>
-                    </div>
-                </article>
-
-                <!-- A maior/menor umidade registrada no momento -->
-                <article class="metrica controlado">
-                    <span>Menor Umidade</span>
-                    <div class="circulo">
-                        <span id="min_moisture">17%</span>
-                    </div>
-                </article>
-                <article class="metrica critico">
-                    <span>Maior Umidade</span>
-                    <div class="circulo">
-                        <span id="max_moisture">45%</span>
-                    </div>
-                </article>
-            </section>
-
-            <!-- Seleção das fazendas para analisar -->
-            <section id="farm_list"></section>
-
-            <!-- Gráficos da fazenda selecionada -->
-            <section id="farm_conteudo">
-                <!-- <div class="graph">
-                    <canvas id="chart1"></canvas>
-                </div> -->
-
-                <div class="graph">
-                    <!-- <canvas id="canvas_grafico"></canvas> -->
-                </div>
-            </section>
-
-            <!-- Tabelas com dados para análise rápida -->
-            <section id="farm_tabela" class="dash-container"></section>
-
-        </section>
-    </main>
 
 </body>
 
