@@ -34,14 +34,17 @@ function cadastrar(nome, email, senha, cargo, nomecorp, cnpj) {
         INSERT INTO Empresa (nomeEmpresa, cnpj) VALUES ('${nomecorp}', '${cnpj}')`;
         console.log("Executando a cadastro Usuario: \n" + instrucao);
         database.executar(instrucao);
+        caduser()
     }
+    function caduser() {
 
-    var instrucao = `
+        var instrucao = `
         INSERT INTO Usuario (nomeUsuario, email, cargo, senha, fkEmpresa)
         VALUES ('${nome}', '${email}', '${cargo}', '${senha}', (select idEmpresa from Empresa where CNPJ = '${cnpj}'))`;
-    console.log("Executando a cadastro Usuario: \n" + instrucao);
-    return database.executar(instrucao);
-
+        console.log("Executando a cadastro Usuario: \n" + instrucao);
+        return database.executar(instrucao);
+        
+    }
 }
 
 function registraruser(nome, email, senha, cargo, cnpj) {

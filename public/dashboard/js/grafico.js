@@ -1,4 +1,4 @@
-let proximaAtualizacao;
+'   let proximaAtualizacao;
 
 window.onload = obterDadosGrafico(1);
 
@@ -12,7 +12,7 @@ function alterarTitulo(idSensor) {
 // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
 // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-// Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+// Esta função *obterDadosG rafico* busca os últimos dados inseridos em tabela de medidas.
 // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
 // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
 

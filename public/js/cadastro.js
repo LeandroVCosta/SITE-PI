@@ -227,9 +227,12 @@ function cadastrar() {
     var senhaVar = inp_pass.value;
     var nomeempresa = inp_name_corp.value;
     var cnpj = inp_cnpj.value;
-    var cargo = 'Chefe'
+    var cargo = 'Chefe';
+
+
+    alert(cnpj)
     // Enviando o valor da nova input
-    fetch("../usuarios/cadastrar", {
+    fetch("/usuarios/cadastrar", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
