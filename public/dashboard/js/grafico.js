@@ -1,10 +1,10 @@
-'   let proximaAtualizacao;
+ let proximaAtualizacao;
 
 window.onload = obterDadosGrafico(1);
 
 function alterarTitulo(idSensor) {
     var titulofazenda = document.getElementById("titulofazenda")
-    titulofazenda.innerHTML = `Fazenda ${idSensor}`
+    titulofazenda.innerHTML = `AREA ${idSensor}`
 }
 
 // O gráfico é construído com três funções:
@@ -56,15 +56,15 @@ function plotarGrafico(resposta, idSensor) {
                 label: 'Umidade',
                 borderColor: '#32B9CD',
                 backgroundColor: '#32b9cd8f',
-                fill: true,
+                fill: false,
                 data: []
             },
             {
                 yAxisID: 'y-temperatura',
                 label: 'Temperatura',
-                borderColor: '#FFF',
-                backgroundColor: '#32b9cd8f',
-                fill: true,
+                borderColor: 'red',
+                backgroundColor: 'red',
+                fill: false,
                 data: []
             }
         ]
@@ -72,9 +72,9 @@ function plotarGrafico(resposta, idSensor) {
 
     for (i = 0; i < resposta.length; i++) {
         var registro = resposta[i];
-        dados.labels.push(registro.momento_grafico);
-        dados.datasets[0].data.push(registro.umidade);
-        dados.datasets[1].data.push(registro.temperatura);
+        dados.labels.push(registro.horario);
+        dados.datasets[0].data.push(registro.Umidade);
+        dados.datasets[1].data.push(registro.Temperatura);
     }
 
     console.log(JSON.stringify(dados));
@@ -99,7 +99,7 @@ function plotarGrafico(resposta, idSensor) {
                     id: 'y-temperatura',
                     ticks: {
                         beginAtZero: true,
-                        max: 100,
+                        max: 50,
                         min: 0
                     }
                 }, {
@@ -109,7 +109,7 @@ function plotarGrafico(resposta, idSensor) {
                     id: 'y-umidade',
                     ticks: {
                         beginAtZero: true,
-                        max: 100,
+                        max: 50,
                         min: 0
                     },
 
@@ -141,18 +141,65 @@ function atualizarGrafico(idSensor, dados) {
 
                 // tirando e colocando valores no gráfico
                 dados.labels.shift(); // apagar o primeiro
-                dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
+                dados.labels.push(novoRegistro[0].horario); // incluir um novo momento
                 
                 dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
+                dados.datasets[0].data.push(novoRegistro[0].Umidade); // incluir uma nova medida de umidade
                 
                 dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-                dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+                dados.datasets[1].data.push(novoRegistro[0].Temperatura); // incluir uma nova medida de temperatura
 
                 window.grafico_linha.update();
 
                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
                 proximaAtualizacao = setTimeout(() => atualizarGrafico(idSensor, dados), 2000);
+                // IF PARA UMIDADE MODERADA
+                if (novoRegistro[0].Umidade >= 30 || novoRegistro[0].Umidade <= 40) {
+                    canvas_grafico.style.backgroundColor = `rgba(0, 155, 0, 0.1)`
+                    alertaumi.style.color = 'green'
+                    alertaumi.innerHTML = `IDEAL`
+                // IF PARA UMIDADE EM ALERTA
+                } if (novoRegistro[0].Umidade > 24 || novoRegistro[0].Umidade <= 27) {
+                    canvas_grafico.style.backgroundColor = `rgba(255, 255, 0, 0.2)`
+                    alertaumi.style.color = 'yellow'
+                    alertaumi.innerHTML = `ALERTA!`
+                }
+                
+                if (novoRegistro[0].Umidade > 40 || novoRegistro[0].Umidade < 43) {
+                    canvas_grafico.style.backgroundColor = `rgba(255, 255, 0, 0.2)`
+                    alertaumi.style.color = 'yellow'
+                    alertaumi.innerHTML = `ALERTA!`
+                }
+                // IF PARA O ESTADO CRÍTICO!!!
+                if (novoRegistro[0].Umidade <= 24 || novoRegistro[0].Umidade >= 44) {
+                    canvas_grafico.style.backgroundColor = `rgba(155, 0, 0, 0.1)`
+                    alertaumi.style.color = 'red'
+                    alertaumi.innerHTML = `CRÍTICO!`
+                }
+                // IF PARA TEMPERATURA MODERADA
+
+                if (novoRegistro[0].Temperatura >= 24 || novoRegistro[0].Temperatura <= 30){
+                    canvas_grafico.style.backgroundColor = `rgba(0, 155, 0, 0.1)`
+                    alertatemp.style.color = 'green'
+                    alertatemp.innerHTML = `IDEAL`
+                }
+                // IF PARA TEMPERATURA EM ALERTA!
+                if (novoRegistro[0].Temperatura > 22 || novoRegistro[0].Temperatura < 24){
+                    canvas_grafico.style.backgroundColor = `rgba(255, 255, 0, 0.2)`
+                    alertatemp.style.color = 'yellow'
+                    alertatemp.innerHTML = `ALERTA!`
+                }
+                if (novoRegistro[0].Temperatura >= 31 || novoRegistro[0].Temperatura <= 32){
+                    canvas_grafico.style.backgroundColor = `rgba(255, 255, 0, 0.2)`
+                    alertatemp.style.color = 'yellow'
+                    alertatemp.innerHTML = `ALERTA!`
+                }
+                // IF PARA TEMPERATURA CRÍTICA
+                if (novoRegistro[0].Temperatura <= 22 || novoRegistro[0].Temperatura >= 32){
+                    canvas_grafico.style.backgroundColor = `rgba(155, 0, 0, 0.1)`
+                    alertatemp.style.color = 'red'
+                    alertatemp.innerHTML = `CRÍTICO!`
+                }
             });
         } else {
             console.error('Nenhum dado encontrado ou erro na API');

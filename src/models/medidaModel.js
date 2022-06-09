@@ -1,23 +1,19 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(fkSensor, limite_linhas) {
+function buscarUltimasMedidas(idSensor, limite_linhas) {
 
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `SELECT TOP ${limite_linhas}
-        temperatura, umidade, horario,
+        temperatura as Temperatura, umidade as Umidade, horario
                         CONVERT(varchar, horario, 108) as horario
                     FROM dadosSensor
-                    WHERE fkSensor = ${fkSensor}
+                    WHERE fkSensor = ${idSensor}
                     ORDER BY idDado DESC`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `SELECT 
-        temperatura, umidade, horario,
-                        DATE_FORMAT(horario,'%H:%i:%s') as horario
-                    FROM dadosSensor
-                    WHERE fkSensor = ${fkSensor}
-                    ORDER BY idDado DESC LIMIT ${limite_linhas}`;
+        instrucaoSql = `select temperatura as Temperatura, umidade as Umidade, Horario as horario from DadosSensor join Sensor on
+        IdSensor = FkSensor where IdSensor = ${idSensor} order by horario desc limit ${limite_linhas}`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -27,7 +23,7 @@ function buscarUltimasMedidas(fkSensor, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(fkSensor) {
+function buscarMedidasEmTempoReal(idSensor) {
 
     instrucaoSql = ''
 
@@ -36,16 +32,12 @@ function buscarMedidasEmTempoReal(fkSensor) {
         temperatura, umidade, 
                         CONVERT(varchar, horario, 108) as horario, 
                         fkSensor 
-                        FROM dadosSensor WHERE fkSensor = ${fkSensor} 
+                        FROM dadosSensor WHERE fkSensor = ${idSensor} 
                     ORDER BY idDado DESC`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `SELECT 
-        temperatura, umidade,
-                        DATE_FORMAT(horario,'%H:%i:%s') as horario, 
-                        fkSensor 
-                        FROM dadosSensor WHERE fkSensor = ${fkSensor} 
-                    ORDER BY idDado DESC limit 1`;
+        instrucaoSql = `select temperatura as Temperatura, umidade as Umidade, Horario as horario from DadosSensor join Sensor on
+        IdSensor = FkSensor where IdSensor = '${idSensor}' limit 1`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
