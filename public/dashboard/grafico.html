@@ -38,15 +38,15 @@
                     </li>
 
                     <li>
-                        <a href="../login.html" id="logout">
+                        <a href="./grafico.html" id="logout">
                             <img src="../img/sistema/svg/logout.svg" alt="Sair do site">
-                            <span>Sair</span>
+                            <span>Voltar</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-    </header>
+    </header> 
 
     <main>
         <!-- Barra de navegação lateral -->
@@ -90,13 +90,14 @@
 
             <div class="btn_fazendas">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(1)">FAZENDA 1</button>
-                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(2)">FAZENDA 2</button>
-                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(3)">FAZENDA 3</button>
-                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(4)">FAZENDA 4</button>
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(1)">AREA 1</button>
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(2)">AREA 2</button>
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(3)">AREA 3</button>
+                <button class="btn_sel_fazenda" onclick="obterDadosGrafico(4)">AREA 4</button>
             </div>
             <div class="corpo">
-                <h3 class="titulo">O gráfico está exibindo os dados da<b class="titulofzd" id="titulofazenda"></b></h3>
+                <h3 class="titulo">O GRÁFICO ESTÁ EXIBINDO OS DADOS DA <b class="titulofzd" id="titulofazenda"></b>
+                <b class="titulofzd" style="color: black;">SITUAÇÃO UMIDADE: <span id="alertaumi"></span> <br> SITUAÇÃO TEMPERATURA:<span id="alertatemp"></span></b></h3> 
             </div>
         <div class="graph">
             <canvas id="canvas_grafico"></canvas>
