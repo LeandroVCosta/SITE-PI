@@ -172,10 +172,10 @@ function plotarTabela(resposta) {
             tabela.innerHTML +=
                 `
             <tr>
-                <th class="txt-center">1</th>
-                <td>${json.nome}</td>
-                <td>${json.email}</td>
-                <td>${json.cargo}</td>
+                <th class="txt-center">${json[i].idUsuario}</th>
+                <td>${json[i].nomeUsuario}</td>
+                <td>${json[i].email}</td>
+                <td>${json[i].cargo}</td>
                 <td class="pass">
                     <span>******</span>
                     <img src="../img/sistema/svg/eye_closed.svg" alt="Ver senha" title="Ver senha">
@@ -183,7 +183,7 @@ function plotarTabela(resposta) {
                 <td class="txt-center"><img src="../img/sistema/svg/pencil_writing.svg" alt="Editar usuário"
                         title="Editar usuário"></td>
                 <td class="txt-center delete"><img src="../img/sistema/svg/delete.svg" alt="Deletar usuário"
-                        title="Deletar usuário" onclick="excluirUsuario(${json.idUsuario},${sessionStorage.EMPRESA_CNPJ} ) "></td> 
+                        title="Deletar usuário" onclick="excluirUsuario(${json[i].idUsuario},${sessionStorage.EMPRESA_CNPJ} ) "></td> 
             </tr>
         `
         }
@@ -210,9 +210,7 @@ function excluirUsuario(idUsuario, cnpj) {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            console("Funcionário excluido com Sucesso!");
-
-            plotarTabela(resposta)
+            console.log("Funcionário excluido com Sucesso!");
 
         } else {
             throw ("Houve um erro ao excluir funcionários!");

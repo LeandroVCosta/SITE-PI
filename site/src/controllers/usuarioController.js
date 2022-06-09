@@ -25,23 +25,6 @@ function listar(req, res) {
 }
 
 function listarusuario(req, res) {
-    usuarioModel.listar()
-        .then(function (resultado) {
-            if (resultado.length > 0) {
-                res.status(200).json(resultado);
-            } else {
-                res.status(204).send("Nenhum resultado encontrado!")
-            }
-        }).catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
-
-function listarusuario(req, res) {
     var cnpj = req.body.cnpjServer;
 
     if (cnpj == undefined) {
@@ -54,7 +37,7 @@ function listarusuario(req, res) {
                     console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
 
                     console.log(resultado);
-                    res.json(resultado[0]);
+                    res.json(resultado);
                 }
             ).catch(
                 function (erro) {
