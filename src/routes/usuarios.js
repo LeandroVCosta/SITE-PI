@@ -15,6 +15,7 @@ router.get("/listar", function (req, res) {
     usuarioController.listar(req, res);
 });
 
+
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);
@@ -26,6 +27,10 @@ router.post("/autenticar", function (req, res) {
 
 router.post("/registraruser", function (req, res) {
     usuarioController.registraruser(req, res);
+});
+
+router.post("/listarusuario", function (req, res) {
+    usuarioController.listarusuario(req, res);
 });
 
 module.exports = router;

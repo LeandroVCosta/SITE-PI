@@ -215,8 +215,8 @@ function registerCheck() {
     if (!valCnpj() | !valNameCorp()) {
         return false
     } 
-        cadastrar()
-        return true
+    cadastrar()
+    return true
 }
 
 function cadastrar() {
@@ -229,8 +229,6 @@ function cadastrar() {
     var cnpj = inp_cnpj.value;
     var cargo = 'Chefe';
 
-
-    alert(cnpj)
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
         method: "POST",
@@ -252,12 +250,7 @@ function cadastrar() {
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
-
-            setTimeout(() => {
-                window.location = "login.html";
-            }, "2000")
-
+            alert("Cadastro realizado com sucesso! Redirecionando para o interior do site...");
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
         }

@@ -19,18 +19,11 @@ function passCheck() {
 
     // Verificando se a senha é forte com regex
     if (pass == '') {
-        warning_pass.innerHTML = 'Digite uma senha'
-        warning_pass.className = 'invalid'
         return false
     }
-
     if (regex.test(pass)) {
-        warning_pass.innerHTML = ''
-        warning_pass.className = 'valid'
         return true
     } else {
-        warning_pass.className = 'missing'
-        warning_pass.innerHTML = 'Use oito ou mais caracteres com uma combinação de letras, números e símbolos: @ ! # $ % ^ & * ( ) / e \\'
         return false
     }
 }
@@ -44,19 +37,13 @@ function valEmail() {
 
     // Validando email se os caracteres do email é válido
     if (email == '') {
-        warning_email.className = 'invalid'
-        warning_email.innerHTML = 'Digite um email válido'
         return false
     }
 
     if (regex.test(email)) {
-        warning_email.innerHTML = ''
-        warning_email.className = 'valid'
         return true
     }
 
-    warning_email.className = 'missing'
-    warning_email.innerHTML = 'Digite um email válido'
     return false
 }
 
@@ -68,16 +55,10 @@ function valName() {
 
     // Validando a quantidade de palavra e caracteres
     if (name == '') {
-        warning_name.className = 'invalid'
-        warning_name.innerHTML = 'Digite seu nome completo'
         return false
     } else if (regex.test(name)) {
-        warning_name.innerHTML = ''
-        warning_name.className = 'valid'
         return true
     } else {
-        warning_name.className = 'missing'
-        warning_name.innerHTML = 'Digite seu nome completo'
         return false
     }
 }
@@ -90,20 +71,14 @@ function valPosition() {
 
     // Validando a quantidade de palavra e caracteres
     if (position == '') {
-        warning_position.className = 'invalid'
-        warning_position.innerHTML = 'Digite um cargo'
         return false
     }
     
     if (regex.test(position)) {
-        warning_position.innerHTML = ''
-        warning_position.className = 'valid'
         return true
     }
 
     if(position == "Dono" || position == "Chefe") {
-        warning_position.className = 'missing'
-        warning_position.innerHTML = 'Apenas quem fez o cadastro pode ter esse cargo'
         return false
     }
 }
@@ -148,6 +123,37 @@ function registraruser() {
 
         } else {
             throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+    return false;
+}
+
+// Chamando função para listar usuário na tabela
+window.onload = listarUsuario(sessionStorage.EMPRESA_CNPJ)
+function listarUsuario(cnpj){
+    // Enviando o valor da nova input
+    fetch("/usuarios/listarUsuario", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            cnpjServer: cnpj,
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            console("Mostrando funcionários com Sucesso!");
+
+        } else {
+            throw ("Houve um erro ao mostrar funcionários!");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
