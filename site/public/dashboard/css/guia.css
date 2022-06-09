@@ -185,3 +185,42 @@ b {
     width: 97%;
     
 }
+
+.pipefy{
+    align-items:center ;
+    text-align: center;
+    margin-left: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 22%;
+    height: 260px;
+    background-color: #c3bebe;
+    border-radius: 10px;
+}
+
+.pipefy p{
+    padding: 0 1px;
+    width: 5%;
+}
+
+.pipefy a{
+    white-space: nowrap;
+}
+
+.pipefy img{
+    width: 176px;
+    height: 178px;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.download{
+    background-color: #c3bebe;
+    width: 200%;
+    height: 200%;
+    white-space: nowrap;
+border: none;
+border-radius: 10px;
+}
