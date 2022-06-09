@@ -6,10 +6,10 @@ function buscarUltimasMedidas(idSensor, limite_linhas) {
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `SELECT TOP ${limite_linhas}
-        temperatura, umidade, horario,
+        temperatura as Temperatura, umidade as Umidade, horario
                         CONVERT(varchar, horario, 108) as horario
                     FROM dadosSensor
-                    WHERE fkSensor = ${fkSensor}
+                    WHERE fkSensor = ${idSensor}
                     ORDER BY idDado DESC`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select temperatura as Temperatura, umidade as Umidade, Horario as horario from DadosSensor join Sensor on
@@ -32,7 +32,7 @@ function buscarMedidasEmTempoReal(idSensor) {
         temperatura, umidade, 
                         CONVERT(varchar, horario, 108) as horario, 
                         fkSensor 
-                        FROM dadosSensor WHERE fkSensor = ${fkSensor} 
+                        FROM dadosSensor WHERE fkSensor = ${idSensor} 
                     ORDER BY idDado DESC`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
