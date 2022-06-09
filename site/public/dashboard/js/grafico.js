@@ -1,6 +1,6 @@
  let proximaAtualizacao;
 
-window.onload = obterDadosGrafico(1);
+window.onload = obterDadosGrafico(5);
 
 function alterarTitulo(idSensor) {
     var titulofazenda = document.getElementById("titulofazenda")

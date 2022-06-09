@@ -8,10 +8,10 @@ const SERVIDOR_PORTA = 3300;
 const HABILITAR_OPERACAO_INSERIR = true;
 
 // escolha deixar a linha 'desenvolvimento' descomentada se quiser conectar seu arduino ao banco de dados local, MySQL Workbench
-const AMBIENTE = 'desenvolvimento';
+//const AMBIENTE = 'desenvolvimento';
 
 // escolha deixar a linha 'producao' descomentada se quiser conectar seu arduino ao banco de dados remoto, SQL Server
-// const AMBIENTE = 'producao';
+const AMBIENTE = 'producao';
 
 const serial = async (
     valoresDht11Umidade,
