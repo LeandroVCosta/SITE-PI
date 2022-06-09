@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'AgroConsult'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EB78F6AC87D644BC874CD49CE24AC6C4 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0AA1BF9F68B43539BB23FB50B2C9815 }}
           package: .
