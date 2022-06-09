@@ -97,10 +97,31 @@
                 </div>
                 <div class="user">
                     <img src="../img/utilizaveis/user.png" alt="user" class="user-imagem">
-                    <p class="nome">Nome Completo</p>
+                    <input class="nome" id="nomeUsuario" type="text" disabled>
+                    <button class="person">Personalizar está página</button>
                 </div>
-                <div class="card1"><p>tempo</p></div>
-                <div class="card2"><p>margin</p></div>
+                <div class="cont-perfil">
+                    <div class="card1">
+                        <h2>Detalhes do Usuário</h2>
+                        <p>Email</p>
+                        <input class="email" id="emailUsuario" type="text" disabled>
+                    </div>
+                    <div class="card2">
+                        <h2>Funcionários</h2>
+                        <p>Lista</p>
+                        <p>Editar</p>
+                    </div>
+                </div>
+                <div class="cont-perfil2">
+                    <div class="card3">
+                        <h2>Privacidade e Políticas</h2>
+                        <p>Resumo de retenção de dados</p>
+                    </div>
+                    <div class="card4">
+                        <h2>Relatórios</h2>
+                        <p>Visão Geral </p>
+                    </div>
+                </div>
             </section>
 
         </section>
@@ -111,3 +132,8 @@
 </html>
 
 <script src="js/global.js"></script>
+
+<script>
+    nomeUsuario.value = sessionStorage.USUARIO_NOME 
+    emailUsuario.value = sessionStorage.USUARIO_EMAIL 
+</script>
