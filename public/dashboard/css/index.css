@@ -1,27 +1,130 @@
-.inf{
-margin: auto;
-bottom: 20%;
-text-align: center;
+.inf {
+    padding: 2% 0;
+    color: #ffffff;
+    background-color: #c3bebe;
+    border-radius: 10px 10px 0 0;
+    margin: auto;
+    bottom: 20%;
+    text-align: center;
 }
 
 .user {
+    align-items: center;
+    background-color: #c3bebe;
+    width: 100%;
     padding: 40px 0;
     float: left;
-    margin-left: 80%;
-    display: inline-flexbox;
+    display: flex;
+    justify-content: last baseline;
 }
 
-.user .nome{
-    margin-left: 10%;
+.user .nome {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    margin-left: 2%;
     padding-right: 100%;
-    padding: 3px 2px;
+    padding: 10px 2px;
     width: 80%;
-    background-color: silver;
+    font-size: 60px;
     white-space: nowrap;
 }
 
 .user-imagem {
+    margin-left: 5%;
+    padding: 5px;
     width: 150px;
     height: 150px;
     border-radius: 80px;
+}
+
+.person{
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 10%;
+    float: left;
+    white-space: nowrap;
+    width: 56%;
+    height: 30px;
+    background: rgb(146, 145, 145);
+    border-radius: 10px;
+    border: grey solid 1px;
+    margin-right: 110px;
+}
+
+.cont-perfil {
+    display: flex;
+    float: right;
+    padding: 4% 10%;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.cont-perfil p{
+margin-top: 10%;
+}
+
+.cont-perfil2 {
+    display: flex;
+    float: right;
+    padding: 2% 10%;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.cont-perfil2 p{
+    margin-top: 10%;
+}
+
+.card1 {
+    padding: 2%;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px 10px #c3bebe;
+    width: 500px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.email{
+    margin-top: 10%;
+    border: transparent;
+}
+
+.card2 {
+    padding: 2%;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px 10px #c3bebe;
+    width: 500px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.card3 {
+    padding: 2%;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px 10px #c3bebe;
+    width: 500px;
+    height: 140px;
+    border-radius: 4px;
+}
+
+.card4 {
+    padding: 2%;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px 10px #c3bebe;
+    width: 500px;
+    height: 140px;
+    border-radius: 4px;
+    margin-top: 1%;
 }

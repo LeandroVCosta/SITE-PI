@@ -91,6 +91,7 @@ main {
 
 /* Local onde todo o conteúdo da página estará */
 .page-content {
+    align-items: center;
     position: absolute;
     flex-direction: column;
     display: flex;
@@ -99,6 +100,7 @@ main {
     bottom: 0;
     left: calc(var(--sideBar-width) + 35px);
     width: 90%;
+    height: 125%;
     border-radius: 10px;
     background-color: #ffffff;
     transition: 500ms;
