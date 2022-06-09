@@ -73,12 +73,12 @@ function valPosition() {
     if (position == '') {
         return false
     }
-    
+
     if (regex.test(position)) {
         return true
     }
 
-    if(position == "Dono" || position == "Chefe") {
+    if (position == "Dono" || position == "Chefe") {
         return false
     }
 }
@@ -133,9 +133,68 @@ function registraruser() {
 
 // Chamando função para listar usuário na tabela
 window.onload = listarUsuario(sessionStorage.EMPRESA_CNPJ)
-function listarUsuario(cnpj){
+function listarUsuario(cnpj) {
+    fetch("/usuarios/listarusuario", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            cnpjServer: cnpj
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+            plotarTabela(resposta)
+        }
+    })
+}
+
+function plotarTabela(resposta) {
+    let tabela = document.getElementById("tabela")
+    const qtdFuncionario = document.getElementById("qtdFuncionario")
+
+
+    resposta.json().then(json => {
+        console.log(json);
+        console.log(JSON.stringify(json));
+
+        let count = Object.keys(json).length;
+        console.log(count);
+
+        qtdFuncionario.innerHTML = `${count} Usuário(s) encontrado`
+
+        for (let i = 0; i < count; i++) {
+
+            tabela.innerHTML +=
+                `
+            <tr>
+                <th class="txt-center">1</th>
+                <td>${json.nome}</td>
+                <td>${json.email}</td>
+                <td>${json.cargo}</td>
+                <td class="pass">
+                    <span>******</span>
+                    <img src="../img/sistema/svg/eye_closed.svg" alt="Ver senha" title="Ver senha">
+                </td>
+                <td class="txt-center"><img src="../img/sistema/svg/pencil_writing.svg" alt="Editar usuário"
+                        title="Editar usuário"></td>
+                <td class="txt-center delete"><img src="../img/sistema/svg/delete.svg" alt="Deletar usuário"
+                        title="Deletar usuário" onclick="excluirUsuario(${json.idUsuario},${sessionStorage.EMPRESA_CNPJ} ) "></td> 
+            </tr>
+        `
+        }
+    });
+
+
+}
+
+function excluirUsuario(idUsuario, cnpj) {
     // Enviando o valor da nova input
-    fetch("/usuarios/listarUsuario", {
+    fetch("/usuarios/excluirUsuario", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -143,17 +202,20 @@ function listarUsuario(cnpj){
         body: JSON.stringify({
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
-            cnpjServer: cnpj,
+            idUsuarioServer: idUsuario,
+            cnpjServer: cnpj
         })
     }).then(function (resposta) {
 
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-            console("Mostrando funcionários com Sucesso!");
+            console("Funcionário excluido com Sucesso!");
+
+            plotarTabela(resposta)
 
         } else {
-            throw ("Houve um erro ao mostrar funcionários!");
+            throw ("Houve um erro ao excluir funcionários!");
         }
     }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
