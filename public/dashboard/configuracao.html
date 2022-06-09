@@ -27,9 +27,9 @@
                 <img src="../img/sistema/svg/down-arrow.svg" alt="Menu com queda">
                 <ul class="navbar drop">
                     <li>
-                        <a href="./configuracao.html">
-                            <img src="../img/sistema/svg/settings.svg" alt="Guia de como usar o sistema">
-                            <span>Configuração</span>
+                        <a href="configuracao.html">
+                            <img src="../img/utilizaveis/user_perfil.png" alt="Guia de como usar o sistema">
+                            <span>Perfil</span>
                         </a>
                     </li>
 
@@ -50,7 +50,6 @@
             <h1>Perfil</h1>
             <div class="perfil">
                 <input id="nomeUsuario" class="in_config" name="Nome" type="text" disabled>
-                <b class="b_alterar" onclick="enable()">Alterar Nome</b>
             </div>
             <div class="perfil">
                 <input id="emailUsuario" class="in_config" name="Email" type="text" disabled>
@@ -58,7 +57,6 @@
             <div class="perfil">
                 <input id="cargoUsuario" class="in_config" name="cargo" type="text" disabled>
             </div>
-            <button id="btn_configuracao" onclick="alterar()">Alterar</button>
         </div>
     </div>
     <!--Fim da área de configuração-->
@@ -71,18 +69,4 @@
     nomeUsuario.value = sessionStorage.USUARIO_NOME
     emailUsuario.value = sessionStorage.USUARIO_EMAIL
     cargoUsuario.value = sessionStorage.USUARIO_CARGO
-
-    var nome = sessionStorage.USUARIO_NOME
-    var nomeAtual = nomeUsuario.value
-    
-        function enable() {
-            document.getElementById('nomeUsuario').disabled =false
-        }
-        function enable2() {
-            document.getElementById('nomeUsuario').disabled =false
-        }
-        function alterar() {
-            var nomeAtual = nomeUsuario.value
-            
-        }
 </script>

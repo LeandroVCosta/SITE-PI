@@ -145,7 +145,7 @@ main {
 }
 
 .top-bar div img {
-    height: 17px;
+    height: 16px;
     filter: invert(100%) sepia(100%) saturate(28%) hue-rotate(48deg) brightness(106%) contrast(109%);
 }
 
@@ -192,7 +192,7 @@ main {
 }
 
 .drop li a img {
-    height: 25px;
+    height: 20px;
     margin: 0 10px;
 }
 
