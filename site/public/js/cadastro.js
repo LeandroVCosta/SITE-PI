@@ -230,7 +230,7 @@ function cadastrar() {
     var cargo = 'Chefe';
 
     // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
+    fetch("../usuarios/cadastrar", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
